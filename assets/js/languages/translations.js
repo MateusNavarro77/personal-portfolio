@@ -9,7 +9,12 @@ export const translations = {
 languageSelectInput.addEventListener("change",(e)=>{
     localStorage.setItem("language",e.target.value)
     translate()
+	//console.log(document.getElementById("english-option").selected)
+	document.getElementById("english-option").selected = getCurrentLanguage() === "en"
+	document.getElementById("portuguese-option").selected = getCurrentLanguage() === "pt_br"
 })
+document.getElementById("english-option").selected = getCurrentLanguage() === "en"
+document.getElementById("portuguese-option").selected = getCurrentLanguage() === "pt_br"
 function getCurrentLanguage() {
 	let storedLanguage = localStorage.getItem("language");
 	if (!storedLanguage) {
@@ -20,7 +25,7 @@ function getCurrentLanguage() {
 }
 function translate(){
     const currentLanguage = getCurrentLanguage()
-    console.log(translations[currentLanguage])
+    //console.log(translations[currentLanguage])
     translatePage(translations[currentLanguage])
     //translatePage(language[language])
 }
