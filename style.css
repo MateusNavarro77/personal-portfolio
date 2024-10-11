@@ -90,7 +90,19 @@ img {
     border: 2px solid;
     padding: 10px 20px;
 }
-
+.select{
+    border-color: #2bd853;
+    background-color: #000;
+    color: #46d166;
+}
+@media screen and (max-width:991px)  {
+    .select{
+        
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+}
 .button:hover {
     color: #000;
 }
