@@ -2,9 +2,9 @@ export const en = {
     about_me: "About me",
     preloader: "Loading",
     nav: {
-        home: "Home",
-        about: "About",
-        portfolio: "Portfolio"
+        home: "HOME",
+        about: "ABOUT",
+        portfolio: "PORTFOLIO"
     },
     hero: {
         name: "Mateus Navarro",
@@ -44,15 +44,21 @@ export const en = {
     about_section: {
         title: "About me",
         description: "I believe the right tools can simplify even the most complex problems.",
-        greeting: "Hi, I'm Mateus Navarro",
+        //greeting: "Hi, I'm Mateus Navarro",
+        greeting:{
+            msg:"Hello, i am ",
+            name:"Mateus Navarro",
+        },
         role: "Smart Contract Developer & Full Stack Developer",
         experience: "I have 1 year of experience developing blockchain solutions, specializing in smart contracts. I am proficient in professional libraries like OpenZeppelin and have worked on integrating tokens following ERC20, ERC721, and ERC1155 standards. I am currently in my 6th semester of Computer Engineering, with a strong foundation in key subjects such as Data Structures, Object-Oriented Programming, and Algorithms.",
         skills: "My Skills",
-        download_resume: "Download my resume"
+        download_resume: "Download my resume",
+        resume:"resume"
     },
     projects_section: {
         title: "My Projects",
         description: "Some of the personal projects I have worked on.",
+        button_text:"Code Repo",
         project_1: {
             title: "Crypto Wallet CLI",
             description: "A simple CLI wallet that allows users to create an Ethereum wallet, check its balance, send, and receive tokens. It was heavily inspired by Metamask’s features."
@@ -63,7 +69,7 @@ export const en = {
         },
         project_3: {
             title: "Gym Rats Clone",
-            description: "A simple clone of a website for gym enthusiasts."
+            description: "Jim hats is supposed to be a clone of the Gym rats mobile app but for web. It was developed using Next.js, Material UI, Express.js and Prisma ORM using a PostgreSQL database."
         }
     }
 }

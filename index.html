@@ -55,10 +55,21 @@
 
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#home">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#home" data-translate="nav.home"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" data-translate="nav.about"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio" data-translate="nav.portfolio"></a></li>
+                       
                     </ul>
+                    
+                        <select name="language-select" id="language-select" class="select">
+                            <option value="en">
+                                EN-US
+                            </option>
+                            <option value="pt_br" >
+                                PT-BR
+                            </option>
+                        </select>
+                    
                 </div>
             </div>
         </nav>
@@ -76,7 +87,7 @@
                         <h2 class="text-uppercase">Mateus Navarro</h2>
                         <h3 class="text-uppercase"><span class="typed"></span></h3>
                         
-                        <a href="#portfolio" class="button smooth-scroll">My projects</a>
+                        <a href="#portfolio" class="button smooth-scroll" data-translate="hero.my_projects">My projects</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +147,7 @@
                 <!-- single featured item -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single-featured-item-wrap">
-                        <h3><a href="#">Smart contracts</a></h3>
+                        <h3><a href="#" data-translate="featured.smart_contracts">Smart contracts</a></h3>
                         <div class="single-featured-item">
                             <div class="featured-icon">
                                 <i class="fa fa-edit"></i>
@@ -162,7 +173,7 @@
                 <!-- single featured item -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single-featured-item-wrap">
-                        <h3><a href="#">Backend Development</a></h3>
+                        <h3><a href="#" data-translate="featured.backend">Backend Development</a></h3>
                         <div class="single-featured-item">
                             <div class="featured-icon">
                                 <i class="fa fa-solid fa-server"></i>
@@ -184,7 +195,7 @@
                 <!-- single featured item -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single-featured-item-wrap">
-                        <h3><a href="#">Frontend development</a></h3>
+                        <h3><a href="#" data-translate="featured.frontend">Frontend development</a></h3>
                         <div class="single-featured-item">
                             <div class="featured-icon">
                                 <i class="fa fa-solid fa-code"></i>
@@ -212,8 +223,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 ">
                     <div class="section-title text-center">
-                        <h2>About Me</h2>
-                        <p>I believe that the right tools can simplify even the most complex problems.</p>
+                        <h2 data-translate="about_section.title">About Me</h2>
+                        <p data-translate="about_section.description">I believe that the right tools can simplify even the most complex problems.</p>
                     </div>
                 </div>
             </div>
@@ -234,13 +245,16 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <h2>Hello, I am <span>Mateus Navarro</span></h2>
-                        <h4>Smart contract developer and a full stack web developer</h4>
-                        <p>
+                        <h2>
+                            <span data-translate="about_section.greeting.msg">Hello, I am</span> 
+                            <span class="about-section-mateus" data-translate="about_section.greeting.name">Mateus Navarro</span>
+                        </h2>
+                        <h4 data-translate="about_section.role">Smart contract developer and a full stack web developer</h4>
+                        <p data-translate="about_section.experience">
                             I have 1 year of experience developing blockchain solutions, specializing in smart contracts. I am proficient with professional libraries such as OpenZeppelin and have worked on integrating tokens that follow the ERC20, ERC721, and ERC1155 standards. Currently, I am in my 6th semester of Computer Engineering, with a solid foundation in essential subjects such as Data Structures, Object-Oriented Programming, and Algorithms
                         </p>
 
-                        <h5>My Skills</h5>
+                        <h5 data-translate="about_section.skills">My Skills</h5>
 
                         <!-- Skill Area -->
                         <div id="skills" class="skill-area">
@@ -334,14 +348,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2>Download  my resume</h2>
+                    <h2 data-translate="about_section.download_resume">Download  my resume</h2>
                 
                 </div>
                 <div class="col-lg-3">
                     <div class="cta-button">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <a href="assets/resume/mateus_navarro_curriculo.pdf" download  class="button">Mateus Navarro Resume</a>
+                                <a href="assets/resume/mateus_navarro_curriculo.pdf" download  class="button" data-translate="about_section.resume">Mateus Navarro Resume</a>
                             </div>
                         </div>
                     </div>
@@ -358,8 +372,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 ">
                     <div class="section-title text-center">
-                        <h2>My Projects</h2>
-                        <p>
+                        <h2 data-translate="projects_section.title">My Projects</h2>
+                        <p data-translate="projects_section.description">
                             Some of the personal projects I have worked on.
                         </p>
                     </div>
@@ -371,12 +385,12 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="blog-thumb" style="background-image: url(https://raw.githubusercontent.com/GreatApe77/ethereum-wallet-cli/refs/heads/main/assets/menu.png)"></div>
-                        <h4 class="blog-title"><a href="https://github.com/GreatApe77/ethereum-wallet-cli.git">Crypto Wallet CLI</a></h4>
-                        <p class="blog-meta"><a href="#">Mateus Navarro</a>, 2024</p>
-                        <p>
+                        <h4 class="blog-title"><a href="https://github.com/GreatApe77/ethereum-wallet-cli.git" data-target="projects_section.project_1.title">Crypto Wallet CLI</a></h4>
+                        <p class="blog-meta"><a href="https://github.com/GreatApe77/ethereum-wallet-cli.git">Mateus Navarro</a>, 2024</p>
+                        <p data-translate="projects_section.project_1.description">
                             A simple CLI wallet that allows you to create a Ethereum wallet, check your balance, send and receive tokens. It was heavily inspired by Metamask functionalities.
                         </p>
-                        <a href="https://github.com/GreatApe77/ethereum-wallet-cli.git" target="_blank" class="button">CODE REPO</a>
+                        <a href="https://github.com/GreatApe77/ethereum-wallet-cli.git" target="_blank" class="button" data-translate="projects_section.button_text">CODE REPO</a>
                     </div>
                 </div>
                 <!-- Single Blog -->
@@ -384,12 +398,12 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="blog-thumb" style="background-image: url(assets/images/portfolio/sistema-eleitoral.png)"></div>
-                        <h4 class="blog-title"><a href="https://github.com/GreatApe77/sistema-eleitoral.git">electoral system</a></h4>
+                        <h4 class="blog-title"><a href="https://github.com/GreatApe77/sistema-eleitoral.git" data-translate="projects_section.project_2.title">electoral system</a></h4>
                         <p class="blog-meta"><a href="#">Mateus Navarro</a>, 2024</p>
-                        <p>
+                        <p data-translate="projects_section.project_2.description">
                             Blockchain based system that allows users to vote in elections. It was developed using Solidity and Hardhat.
                         </p>
-                        <a href="https://github.com/GreatApe77/sistema-eleitoral.git" target="_blank" class="button">CODE REPO</a>
+                        <a href="https://github.com/GreatApe77/sistema-eleitoral.git" target="_blank" class="button" data-translate="projects_section.button_text">CODE REPO</a>
                     </div>
                 </div>
                 <!-- Single Blog -->
@@ -397,12 +411,12 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="blog-thumb" style="background-image: url(assets/images/portfolio/jim-hats.png)"></div>
-                        <h4 class="blog-title"><a href="https://github.com/GreatApe77/jim-hats.git">Gym rats clone</a></h4>
+                        <h4 class="blog-title"><a href="https://github.com/GreatApe77/jim-hats.git" data-translate="projects_section.project_3.title">Gym rats clone</a></h4>
                         <p class="blog-meta"><a href="#">Mateus Navarro</a>, 2024</p>
-                        <p>
+                        <p data-translate="projects_section.project_3.description">
                             Jim hats is supposed to be a clone of the Gym rats mobile app but for web. It was developed using Next.js, Material UI, Express.js and Prisma ORM using a PostgreSQL database.
                         </p>
-                        <a href="https://github.com/GreatApe77/jim-hats.git" target="_blank" class="button">CODE REPO</a>
+                        <a href="https://github.com/GreatApe77/jim-hats.git" target="_blank" class="button" data-translate="projects_section.button_text">CODE REPO</a>
                     </div>
                 </div>
                 <!-- Single Blog -->
@@ -489,6 +503,7 @@
     <script src="assets/js/skill.bar.js"></script>
     <script src="assets/js/fact.counter.js"></script>
     <script src="assets/js/footer-year.js"></script>
+    <script type="module" src="assets/js/languages/translations.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>

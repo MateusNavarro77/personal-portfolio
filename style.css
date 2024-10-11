@@ -460,12 +460,16 @@ button:focus {
     opacity: .5;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
-
+/*
 .about-content h2 span {
     color: #2bd853;
     font-size: 100%;
 }
-
+*/
+.about-section-mateus{
+    color: #2bd853;
+    font-size: 100%;
+}
 .about-content h4 {
     font-weight: 400;
     font-size: 22px;
