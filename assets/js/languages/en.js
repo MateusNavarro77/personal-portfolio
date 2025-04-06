@@ -45,20 +45,20 @@ export const en = {
         title: "About me",
         description: "I believe the right tools can simplify even the most complex problems.",
         //greeting: "Hi, I'm Mateus Navarro",
-        greeting:{
-            msg:"Hello, i am ",
-            name:"Mateus Navarro",
+        greeting: {
+            msg: "Hello, i am ",
+            name: "Mateus Navarro",
         },
         role: "Smart Contract Developer & Full Stack Developer",
         experience: "I have 1 year of experience developing blockchain solutions, specializing in smart contracts. I am proficient in professional libraries like OpenZeppelin and have worked on integrating tokens following ERC20, ERC721, and ERC1155 standards. I am currently in my 6th semester of Computer Engineering, with a strong foundation in key subjects such as Data Structures, Object-Oriented Programming, and Algorithms.",
         skills: "My Skills",
         download_resume: "Download my resume",
-        resume:"resume"
+        resume: "resume"
     },
     projects_section: {
         title: "My Projects",
         description: "Some of the personal projects I have worked on.",
-        button_text:"Code Repo",
+        button_text: "Code Repo",
         project_1: {
             title: "Crypto Wallet CLI",
             description: "A simple CLI wallet that allows users to create an Ethereum wallet, check its balance, send, and receive tokens. It was heavily inspired by Metamask’s features."
@@ -70,6 +70,10 @@ export const en = {
         project_3: {
             title: "Gym Rats Clone",
             description: "Jim hats is supposed to be a clone of the Gym rats mobile app but for web. It was developed using Next.js, Material UI, Express.js and Prisma ORM using a PostgreSQL database."
+        },
+        project_4: {
+            title: "Kriptum",
+            description: "Kriptum is a wallet application (Hot Wallet) inspired by the Metamask mobile app, it allows the creation of wallets, transfer of the native network currency, and balance checking. It was built in Flutter and Dart, using the web3dart library to interact with the blockchain. The app is a simplified version of Metamask."
         }
     }
 }

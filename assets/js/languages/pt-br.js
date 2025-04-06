@@ -67,9 +67,12 @@ export const pt_br = {
             description: "Sistema baseado em blockchain que permite aos usuários votarem em eleições. Foi desenvolvido utilizando Solidity e Hardhat."
         },
         project_3: {
-            title: "Clone Gym Rats ",
-            //Jim hats is supposed to be a clone of the Gym rats mobile app but for web. It was developed using Next.js, Material UI, Express.js and Prisma ORM using a PostgreSQL database.
+            title: "Clone Gym Rats",
             description: "Jim hats é um clone do aplicativo móvel Gym rats, mas para web. Foi desenvolvido usando Next.js, Material UI, Express.js e Prisma ORM usando um banco de dados PostgreSQL."
-        }
+        },
+        project_4: {
+            title: "Kriptum",
+            description: "Kriptum é um aplicativo de carteira (Hot Wallet) inspirado no Metamask mobile, ele permite a criação de carteiras, transferência de moeda nativa da rede e verificação de saldo. Foi construído em Flutter e Dart, utilizando a biblioteca web3dart para interagir com a blockchain. O aplicativo é uma versão simplificada do Metamask."
+        },
     }
 }
