@@ -24,12 +24,12 @@
         "live": "Live Demo",
         "items": [
             {
-                "title": "Projeto Um",
-                "description": "Um aplicativo móvel construído com Flutter que resolve um problema específico do usuário."
+                "title": "Kriptum",
+                "description": "Kriptum é um aplicativo de carteira (Hot Wallet) inspirado no Metamask mobile, ele permite a criação de carteiras, transferência de moeda nativa da rede e verificação de saldo. Foi construído em Flutter e Dart, utilizando a biblioteca web3dart para interagir com a blockchain. O aplicativo é uma versão simplificada do Metamask."
             },
             {
-                "title": "Projeto Dois",
-                "description": "Dashboard de aplicação web para rastreamento de finanças pessoais."
+                "title": "Metrônomo",
+                "description": "O Metrônomo foi criado para oferecer uma experiência \"clean\", sem interrupções. Basta abrir, definir o tempo e começar a praticar. Sem compras no aplicativo, sem pop-ups e sem funções complicadas. Apenas o que você precisa para dominar o seu ritmo"
             }
         ]
     },
