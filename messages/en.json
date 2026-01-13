@@ -1,0 +1,71 @@
+{
+    "Navbar": {
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience",
+        "contact": "Contact"
+    },
+    "Hero": {
+        "status": "Available for internships",
+        "title": "Hi, I'm [Your Name]",
+        "description": "I build mobile and web applications with Flutter and modern technologies.",
+        "viewProjects": "View Projects",
+        "downloadCv": "Download CV"
+    },
+    "About": {
+        "title": "About Me",
+        "p1": "I’m a computer engineering student and software development intern focused on building clean, scalable mobile apps using Flutter. I enjoy turning ideas into real products and constantly improving my skills.",
+        "p2": "Currently, I'm diving deeper into Clean Architecture, State Management, and advanced UI patterns to deliver high-quality user experiences."
+    },
+    "Projects": {
+        "title": "Selected Projects",
+        "code": "Code",
+        "live": "Live Demo",
+        "items": [
+            {
+                "title": "Project One",
+                "description": "A mobile application built with Flutter that solves a specific user problem."
+            },
+            {
+                "title": "Project Two",
+                "description": "Web application dashboard for personal finance tracking."
+            }
+        ]
+    },
+    "Skills": {
+        "title": "Skills & Tech Stack"
+    },
+    "Experience": {
+        "title": "Experience & Education",
+        "items": [
+            {
+                "role": "Software Development Intern",
+                "company": "Company Name",
+                "period": "2023 - Present",
+                "points": [
+                    "Developed Flutter features used by X users",
+                    "Improved app performance by optimising state management",
+                    "Collaborated with cross-functional teams in an agile environment"
+                ]
+            },
+            {
+                "role": "Computer Engineering Student",
+                "company": "University Name",
+                "period": "2021 - 2025",
+                "points": [
+                    "Focusing on systems architecture, data structures, and algorithms",
+                    "Participating in multiple academic projects and coding challenges"
+                ]
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Let's Connect",
+        "description": "Feel free to reach out — I’m always open to new opportunities and interesting projects.",
+        "emailMe": "Email Me"
+    },
+    "Footer": {
+        "rights": "All rights reserved."
+    }
+}

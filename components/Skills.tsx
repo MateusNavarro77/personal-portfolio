@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const SKILLS = {
     "Languages": ["Dart", "Java", "Python", "TypeScript", "JavaScript"],
@@ -10,9 +11,11 @@ const SKILLS = {
 };
 
 const Skills = () => {
+    const t = useTranslations("Skills");
+
     return (
         <section id="skills" className="py-24 px-4 max-w-5xl mx-auto w-full">
-            <h2 className="text-3xl font-bold tracking-tight mb-12">Skills & Tech Stack</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-12">{t("title")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {Object.entries(SKILLS).map(([category, skills], index) => (
                     <motion.div
@@ -22,6 +25,7 @@ const Skills = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                     >
+                        {/* Note: We could translate categories if we add them to messages */}
                         <h3 className="font-bold text-lg mb-4 text-zinc-900 dark:text-zinc-100">{category}</h3>
                         <div className="flex flex-wrap gap-2">
                             {skills.map((skill) => (

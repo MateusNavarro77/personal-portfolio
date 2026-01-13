@@ -1,0 +1,71 @@
+{
+    "Navbar": {
+        "about": "Sobre",
+        "projects": "Projetos",
+        "skills": "Habilidades",
+        "experience": "Experiência",
+        "contact": "Contato"
+    },
+    "Hero": {
+        "status": "Disponível para estágios",
+        "title": "Oi, eu sou [Seu Nome]",
+        "description": "Eu construo aplicações móveis e web com Flutter e tecnologias modernas.",
+        "viewProjects": "Ver Projetos",
+        "downloadCv": "Baixar CV"
+    },
+    "About": {
+        "title": "Sobre Mim",
+        "p1": "Sou estudante de engenharia de computação e estagiário de desenvolvimento de software focado em construir apps móveis limpos e escaláveis usando Flutter. Gosto de transformar ideias em produtos reais e melhorar constantemente minhas habilidades.",
+        "p2": "Atualmente, estou me aprofundando em Clean Architecture, Gerenciamento de Estado e padrões avançados de UI para entregar experiências de usuário de alta qualidade."
+    },
+    "Projects": {
+        "title": "Projetos Selecionados",
+        "code": "Código",
+        "live": "Live Demo",
+        "items": [
+            {
+                "title": "Projeto Um",
+                "description": "Um aplicativo móvel construído com Flutter que resolve um problema específico do usuário."
+            },
+            {
+                "title": "Projeto Dois",
+                "description": "Dashboard de aplicação web para rastreamento de finanças pessoais."
+            }
+        ]
+    },
+    "Skills": {
+        "title": "Habilidades & Tecnologias"
+    },
+    "Experience": {
+        "title": "Experiência & Educação",
+        "items": [
+            {
+                "role": "Estagiário de Desenvolvimento de Software",
+                "company": "Nome da Empresa",
+                "period": "2023 - Presente",
+                "points": [
+                    "Desenvolvi funcionalidades em Flutter usadas por X usuários",
+                    "Melhorei o desempenho do app otimizando o gerenciamento de estado",
+                    "Colaborei com equipes multifuncionais em um ambiente ágil"
+                ]
+            },
+            {
+                "role": "Estudante de Engenharia de Computação",
+                "company": "Nome da Universidade",
+                "period": "2021 - 2025",
+                "points": [
+                    "Focando em arquitetura de sistemas, estruturas de dados e algoritmos",
+                    "Participando de múltiplos projetos acadêmicos e desafios de programação"
+                ]
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Vamos Conversar",
+        "description": "Sinta-se à vontade para entrar em contato — estou sempre aberto a novas oportunidades e projetos interessantes.",
+        "emailMe": "Me envie um e-mail"
+    },
+    "Footer": {
+        "rights": "Todos os direitos reservados."
+    }
+}

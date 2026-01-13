@@ -2,18 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const PROJECTS = [
+const PROJECTS_METADATA = [
     {
-        title: "Project One",
-        description: "A mobile application built with Flutter that solves a specific user problem.",
         tech: ["Flutter", "Firebase", "Dart"],
         github: "#",
         live: "#"
     },
     {
-        title: "Project Two",
-        description: "Web application dashboard for personal finance tracking.",
         tech: ["Next.js", "Tailwind CSS", "TypeScript"],
         github: "#",
         live: "#"
@@ -21,11 +18,13 @@ const PROJECTS = [
 ];
 
 const Projects = () => {
+    const t = useTranslations("Projects");
+
     return (
         <section id="projects" className="py-24 px-4 max-w-5xl mx-auto w-full">
-            <h2 className="text-3xl font-bold tracking-tight mb-12 text-center md:text-left">Selected Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-12 text-center md:text-left">{t("title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {PROJECTS.map((project, index) => (
+                {PROJECTS_METADATA.map((project, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -42,10 +41,10 @@ const Projects = () => {
                         </div>
                         <div className="p-6">
                             <h3 className="text-xl font-bold mb-2 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
-                                {project.title}
+                                {t(`items.${index}.title`)}
                             </h3>
                             <p className="text-zinc-600 dark:text-zinc-400 mb-4 line-clamp-2">
-                                {project.description}
+                                {t(`items.${index}.description`)}
                             </p>
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {project.tech.map((t) => (
@@ -56,10 +55,10 @@ const Projects = () => {
                             </div>
                             <div className="flex gap-4">
                                 <a href={project.github} className="flex items-center gap-2 text-sm font-medium hover:underline">
-                                    <Github size={16} /> Code
+                                    <Github size={16} /> {t("code")}
                                 </a>
                                 <a href={project.live} className="flex items-center gap-2 text-sm font-medium hover:underline">
-                                    <ExternalLink size={16} /> Live Demo
+                                    <ExternalLink size={16} /> {t("live")}
                                 </a>
                             </div>
                         </div>
