@@ -27,7 +27,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: Readonly<{
@@ -45,16 +45,10 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body
-        className={`${inter.variable} ${geistMono.variable} antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Navbar />
+      {children}
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

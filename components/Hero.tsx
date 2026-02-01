@@ -14,7 +14,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <span className="text-zinc-500 font-medium mb-4 block tracking-widest uppercase text-xs">{t("status")}</span>
+                {/* <span className="text-zinc-500 font-medium mb-4 block tracking-widest uppercase text-xs">{t("status")}</span> */}
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-500">
                     {t("title")}
                 </h1>
@@ -23,11 +23,11 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="h-12 px-8 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-full font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group text-sm">
+                    <button className="h-12 px-8 bg-zinc-900 cursor-pointer dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-full font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group text-sm">
                         {t("viewProjects")}
                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <button className="h-12 px-8 border border-zinc-200 dark:border-zinc-800 rounded-full font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all flex items-center justify-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                    <button className="h-12 px-8 border border-zinc-200 cursor-pointer dark:border-zinc-800 rounded-full font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all flex items-center justify-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                         {t("downloadCv")}
                         <Download size={18} />
                     </button>

@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { useTranslations } from "next-intl";
 import ProjectCard from "./ProjectCard";
 import { githubRootUrl } from "@/constants";
