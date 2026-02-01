@@ -8,15 +8,15 @@
     },
     "Hero": {
         "status": "Available for internships",
-        "title": "Hi, I'm [Your Name]",
-        "description": "I build mobile and web applications with Flutter and modern technologies.",
+        "title": "Mateus Navarro",
+        "description": "Mobile Software Developer",
         "viewProjects": "View Projects",
         "downloadCv": "Download CV"
     },
     "About": {
         "title": "About Me",
         "p1": "I’m a computer engineering student and software development intern focused on building clean, scalable mobile apps using Flutter. I enjoy turning ideas into real products and constantly improving my skills.",
-        "p2": "Currently, I'm diving deeper into Clean Architecture, State Management, and advanced UI patterns to deliver high-quality user experiences."
+        "p2": "Currently, I'm diving deeper into State Management and UI patterns to deliver high-quality user experiences."
     },
     "Projects": {
         "title": "Selected Projects",
@@ -29,7 +29,7 @@
             },
             {
                 "title": "Metronome",
-                "description": "Metronome was created to offer a \"clean,\" uninterrupted experience. Just open it, set the tempo, and start practicing. No in-app purchases, no pop-ups, and no complicated features. Just what you need to master your rhythm"
+                "description": "Metronome was created to offer a \"clean,\" uninterrupted experience. Just open it, set the tempo, and start practicing. No in-app purchases, no pop-ups, and no complicated features. Just what you need to master your rhythm."
             }
         ]
     },
@@ -37,32 +37,33 @@
         "title": "Skills & Tech Stack"
     },
     "Experience": {
-        "title": "Experience & Education",
+        "title": "Experience",
         "items": [
             {
-                "role": "Software Development Intern",
-                "company": "Company Name",
-                "period": "2023 - Present",
+                "role": "Mobile Software Development Intern (Flutter)",
+                "company": "Banco do Nordeste",
+                "period": "Nov 2024 - Present",
                 "points": [
-                    "Developed Flutter features used by X users",
-                    "Improved app performance by optimising state management",
-                    "Collaborated with cross-functional teams in an agile environment"
+                    "Implemented UI components designed in Figma to build a reusable Flutter component library.",
+                    "Utilized Jenkins CI/CD tools to automate the testing, building, and deployment of Flutter Proof of Concepts (PoCs).",
+                    "Maintained and updated an internal documentation platform using Docusaurus."
                 ]
             },
             {
-                "role": "Computer Engineering Student",
-                "company": "University Name",
-                "period": "2021 - 2025",
+                "role": "Blockchain Web Developer Intern",
+                "company": "2nd Market",
+                "period": "Aug 2022 - May 2024",
                 "points": [
-                    "Focusing on systems architecture, data structures, and algorithms",
-                    "Participating in multiple academic projects and coding challenges"
+                    "Developed smart contract solutions for companies using professional libraries such as OpenZeppelin.",
+                    "Performed unit and integration testing for smart contracts using Hardhat and Truffle frameworks to ensure code quality.",
+                    "Executed smart contract deployments on test networks (Fantom, Sepolia) and mainnets (Polygon)."
                 ]
             }
         ]
     },
     "Contact": {
         "title": "Let's Connect",
-        "description": "Feel free to reach out — I’m always open to new opportunities and interesting projects.",
+        "description": "Feel free to reach out!",
         "emailMe": "Email Me"
     },
     "Footer": {

@@ -8,15 +8,15 @@
     },
     "Hero": {
         "status": "Disponível para estágios",
-        "title": "Oi, eu sou [Seu Nome]",
-        "description": "Eu construo aplicações móveis e web com Flutter e tecnologias modernas.",
+        "title": "Mateus Navarro",
+        "description": "Desenvolvedor de Software Mobile",
         "viewProjects": "Ver Projetos",
         "downloadCv": "Baixar CV"
     },
     "About": {
         "title": "Sobre Mim",
         "p1": "Sou estudante de engenharia de computação e estagiário de desenvolvimento de software focado em construir apps móveis limpos e escaláveis usando Flutter. Gosto de transformar ideias em produtos reais e melhorar constantemente minhas habilidades.",
-        "p2": "Atualmente, estou me aprofundando em Clean Architecture, Gerenciamento de Estado e padrões avançados de UI para entregar experiências de usuário de alta qualidade."
+        "p2": "Atualmente, estou me aprofundando em Gerenciamento de Estado e padrões de UI para entregar experiências de usuário de alta qualidade."
     },
     "Projects": {
         "title": "Projetos Selecionados",
@@ -37,32 +37,33 @@
         "title": "Habilidades & Tecnologias"
     },
     "Experience": {
-        "title": "Experiência & Educação",
+        "title": "Experiência",
         "items": [
             {
-                "role": "Estagiário de Desenvolvimento de Software",
-                "company": "Nome da Empresa",
-                "period": "2023 - Presente",
+                "role": "Bolsista de Desenvolvimento de Software (Flutter)",
+                "company": "Banco do Nordeste",
+                "period": "Nov 2024 - presente",
                 "points": [
-                    "Desenvolvi funcionalidades em Flutter usadas por X usuários",
-                    "Melhorei o desempenho do app otimizando o gerenciamento de estado",
-                    "Colaborei com equipes multifuncionais em um ambiente ágil"
+                    "Implementei componentes de interface do usuário projetados no Figma para a construção de uma biblioteca de componentes reutilizáveis em Flutter.",
+                    "Utilizei a ferramenta de CI/CD Jenkins para automatizar o processo de teste, build e deploy de Provas de Conceito (PoCs) desenvolvidas em Flutter.",
+                    "Realizei manutenção e atualizações em uma plataforma interna de documentação utilizando Docusaurus."
                 ]
             },
             {
-                "role": "Estudante de Engenharia de Computação",
-                "company": "Nome da Universidade",
-                "period": "2021 - 2025",
+                "role": "Estágio em Desenvolvimento Web Blockchain",
+                "company": "2nd Market",
+                "period": "Ago 2022 - Mai 2024",
                 "points": [
-                    "Focando em arquitetura de sistemas, estruturas de dados e algoritmos",
-                    "Participando de múltiplos projetos acadêmicos e desafios de programação"
+                    "Desenvolvi soluções em smart contracts para empresas utilizando bibliotecas profissionais como OpenZeppelin.",
+                    "Realizei testes unitários e de integração de smart contracts com frameworks como Hardhat e Truffle para garantir a qualidade do código.",
+                    "Efetuei o deploy de smart contracts em redes de teste (Fantom, Sepolia) e em redes principais como Polygon."
                 ]
             }
         ]
     },
     "Contact": {
         "title": "Vamos Conversar",
-        "description": "Sinta-se à vontade para entrar em contato — estou sempre aberto a novas oportunidades e projetos interessantes.",
+        "description": "Sinta-se à vontade para entrar em contato!",
         "emailMe": "Me envie um e-mail"
     },
     "Footer": {
