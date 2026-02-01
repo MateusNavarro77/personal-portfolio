@@ -47,9 +47,9 @@ const ProjectCard = ({ index, tech, github, live }: ProjectCardProps) => {
                     <a href={github} className="flex items-center gap-2 text-sm font-medium hover:underline">
                         <Github size={16} /> {t("code")}
                     </a>
-                    <a href={live} className="flex items-center gap-2 text-sm font-medium hover:underline">
+                    {/* <a href={live} className="flex items-center gap-2 text-sm font-medium hover:underline">
                         <ExternalLink size={16} /> {t("live")}
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </motion.div>
