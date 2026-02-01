@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Software Developer Portfolio",
-  description: "Computer Engineering Student and Software Developer Portfolio",
+  title: "Mateus Navarro",
+  description: "Flutter developer",
 };
 
 export function generateStaticParams() {
