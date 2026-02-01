@@ -1,13 +1,12 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const SKILLS = {
-    "Languages": ["Dart", "Java", "Python", "TypeScript", "JavaScript"],
-    "Frameworks": ["Flutter", "Next.js", "React"],
-    "Tools": ["Git", "Firebase", "REST APIs", "PostgreSQL"],
-    "Concepts": ["Clean Architecture", "MVC", "State Management", "Scrum"]
+    "Languages": ["Dart", "Solidity", "TypeScript", "Java", "JavaScript"],
+    "Frameworks": ["Flutter", "React", "Express JS","Hardhat"],
+    "Tools": ["Git","Github","Gitlab","Jenkins","Docker"],
+   // "Concepts": ["Clean Architecture", "MVC", "State Management", "Scrum"]
 };
 
 const Skills = () => {

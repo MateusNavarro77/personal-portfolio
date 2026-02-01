@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Hero = () => {
     const t = useTranslations("Hero");
@@ -23,14 +24,14 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="h-12 px-8 bg-zinc-900 cursor-pointer dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-full font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group text-sm">
+                    <Link href="/#projects" className="h-12 px-8 bg-zinc-900 cursor-pointer dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-full font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group text-sm">
                         {t("viewProjects")}
                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="h-12 px-8 border border-zinc-200 cursor-pointer dark:border-zinc-800 rounded-full font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all flex items-center justify-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                    </Link>
+                    <Link href={"https://github.com/MateusNavarro77/curriculum/releases/download/latest/Mateus_Navarro_CV_PT.pdf"} className="h-12 px-8 border border-zinc-200 cursor-pointer dark:border-zinc-800 rounded-full font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all flex items-center justify-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                         {t("downloadCv")}
                         <Download size={18} />
-                    </button>
+                    </Link>
                 </div>
             </motion.div>
         </section>

@@ -22,17 +22,17 @@ const Contact = () => {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:mateusnavarro9@gmail.com"
                         className="h-12 px-6 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-medium flex items-center gap-2 hover:opacity-90 transition-opacity"
                     >
                         <Mail size={18} />
                         {t("emailMe")}
                     </a>
                     <div className="flex gap-4">
-                        <a href="#" className="w-12 h-12 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                        <a target="_blank" href="https://www.linkedin.com/in/mateus-navarro-910673298/" className="w-12 h-12 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
                             <Linkedin size={20} />
                         </a>
-                        <a href="#" className="w-12 h-12 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                        <a target="_blank" href="https://github.com/MateusNavarro77" className="w-12 h-12 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
                             <Github size={20} />
                         </a>
                     </div>

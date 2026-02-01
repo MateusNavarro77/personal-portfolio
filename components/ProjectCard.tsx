@@ -44,7 +44,7 @@ const ProjectCard = ({ index, tech, github, live }: ProjectCardProps) => {
                     ))}
                 </div>
                 <div className="flex gap-4">
-                    <a href={github} className="flex items-center gap-2 text-sm font-medium hover:underline">
+                    <a href={github} target="_blank" className="flex items-center gap-2 text-sm font-medium hover:underline">
                         <Github size={16} /> {t("code")}
                     </a>
                     {/* <a href={live} className="flex items-center gap-2 text-sm font-medium hover:underline">
