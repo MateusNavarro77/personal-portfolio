@@ -5,6 +5,14 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images:{
+    remotePatterns:[
+      {
+        protocol:"https",
+        hostname:"avatars.githubusercontent.com"  
+      }
+    ]
+  }
 };
 
 export default withNextIntl(nextConfig);
