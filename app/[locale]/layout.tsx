@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { githubAvatarFaviconUrl, mateusNavarro } from "@/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -17,10 +18,16 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  title: "Mateus Navarro",
+  title: mateusNavarro,
   description: "Flutter developer",
+  creator: mateusNavarro,
+  icons: githubAvatarFaviconUrl,
+  authors: [
+    {
+      name: mateusNavarro,
+    }
+  ]
 };
 
 export function generateStaticParams() {
