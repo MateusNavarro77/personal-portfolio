@@ -1,4 +1,4 @@
-import { Inter, Geist_Mono } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -6,8 +6,8 @@ const inter = Inter({
     subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const plusJakartaSans = Plus_Jakarta_Sans({
+    variable: "--font-plus-jakarta",
     subsets: ["latin"],
 });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <body
-                className={`${inter.variable} ${geistMono.variable} antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100`}
+                className={`${inter.variable} ${plusJakartaSans.variable} antialiased`}
             >
                 {children}
             </body>

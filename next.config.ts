@@ -5,11 +5,15 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
-  images:{
-    remotePatterns:[
+  images: {
+    remotePatterns: [
       {
-        protocol:"https",
-        hostname:"avatars.githubusercontent.com"  
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com"
+      },
+      {
+        protocol: "https",
+        hostname: "opengraph.githubassets.com"
       }
     ]
   }

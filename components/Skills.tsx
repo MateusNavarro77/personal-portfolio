@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Chip from "./Chip";
 
 const SKILLS = {
     "Languages": ["Dart", "Solidity", "TypeScript", "Java", "JavaScript"],
-    "Frameworks": ["Flutter", "React", "Express JS","Hardhat"],
-    "Tools": ["Git","Github","Gitlab","Jenkins","Docker"],
-   // "Concepts": ["Clean Architecture", "MVC", "State Management", "Scrum"]
+    "Frameworks": ["Flutter", "React", "Express JS", "Hardhat"],
+    "Tools": ["Git", "Github", "Gitlab", "Jenkins", "Docker"],
+    // "Concepts": ["Clean Architecture", "MVC", "State Management", "Scrum"]
 };
 
 const Skills = () => {
@@ -14,7 +15,7 @@ const Skills = () => {
 
     return (
         <section id="skills" className="py-24 px-4 max-w-5xl mx-auto w-full">
-            <h2 className="text-3xl font-bold tracking-tight mb-12">{t("title")}</h2>
+            <h2 className="font-display text-4xl md:text-[2.25rem] font-bold tracking-tight mb-12">{t("title")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {Object.entries(SKILLS).map(([category, skills], index) => (
                     <motion.div
@@ -23,17 +24,15 @@ const Skills = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
+                        className="bg-surface-container-low rounded-3xl p-6"
                     >
                         {/* Note: We could translate categories if we add them to messages */}
-                        <h3 className="font-bold text-lg mb-4 text-zinc-900 dark:text-zinc-100">{category}</h3>
+                        <h3 className="font-display font-bold text-xl mb-4 text-foreground">{category}</h3>
                         <div className="flex flex-wrap gap-2">
                             {skills.map((skill) => (
-                                <span
-                                    key={skill}
-                                    className="px-3 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm bg-white dark:bg-black hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors cursor-default"
-                                >
+                                <Chip key={skill}>
                                     {skill}
-                                </span>
+                                </Chip>
                             ))}
                         </div>
                     </motion.div>

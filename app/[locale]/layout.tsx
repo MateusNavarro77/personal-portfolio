@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,15 +8,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { githubAvatarFaviconUrl, mateusNavarro } from "@/constants";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+type AppLocale = (typeof routing.locales)[number];
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 export const metadata: Metadata = {
   title: mateusNavarro,
   description: "Flutter developer",
@@ -44,7 +36,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as AppLocale)) {
     notFound();
   }
 

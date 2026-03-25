@@ -1,25 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f9fa;
+  --foreground: #0f2233;
+  --primary: #005dac;
+  --secondary: #005db7;
+  --surface-container-low: #eef3f8;
+  --surface-container-lowest: #ffffff;
+  --surface-container-high: #e4edf7;
+  --outline-variant: #7f9bb7;
+  --radius-card: 24px;
+  --radius-pill: 9999px;
+  --shadow-ambient: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-interactive: 0 18px 30px -12px rgba(0, 93, 172, 0.3),
+    0 8px 14px -8px rgba(0, 93, 172, 0.2);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-outline-variant: var(--outline-variant);
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-plus-jakarta);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+*::selection {
+  background: color-mix(in srgb, var(--primary) 22%, white);
+  color: var(--foreground);
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle at 1px 1px,
+        color-mix(in srgb, var(--primary) 22%, transparent) 1px,
+        transparent 0);
+    background-size: 28px 28px;
+  }
+
+  .kinetic-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .shadow-ambient {
+    box-shadow: var(--shadow-ambient);
+  }
+
+  .shadow-interactive {
+    box-shadow: var(--shadow-interactive);
+  }
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { buttonVariants } from "./Button";
 
 const Contact = () => {
     const t = useTranslations("Contact");
@@ -13,26 +14,44 @@ const Contact = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 p-12 rounded-3xl"
+                className="bg-surface-container-low border border-outline-variant/15 p-12 rounded-3xl shadow-ambient"
             >
-                <h2 className="text-3xl font-bold tracking-tight mb-4">{t("title")}</h2>
-                <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-8 max-w-md mx-auto">
+                <h2 className="font-display text-3xl font-bold tracking-tight mb-4">{t("title")}</h2>
+                <p className="text-lg text-foreground/70 mb-8 max-w-md mx-auto">
                     {t("description")}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a
                         href="mailto:mateusnavarro9@gmail.com"
-                        className="h-12 px-6 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-medium flex items-center gap-2 hover:opacity-90 transition-opacity"
+                        className={buttonVariants({ variant: "primary", size: "md", className: "px-6" })}
                     >
                         <Mail size={18} />
                         {t("emailMe")}
                     </a>
                     <div className="flex gap-4">
-                        <a target="_blank" href="https://www.linkedin.com/in/mateus-navarro-910673298/" className="w-12 h-12 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://www.linkedin.com/in/mateus-navarro-910673298/"
+                            className={buttonVariants({
+                                variant: "secondary",
+                                size: "md",
+                                className: "w-12 px-0",
+                            })}
+                        >
                             <Linkedin size={20} />
                         </a>
-                        <a target="_blank" href="https://github.com/MateusNavarro77" className="w-12 h-12 flex items-center justify-center border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://github.com/MateusNavarro77"
+                            className={buttonVariants({
+                                variant: "secondary",
+                                size: "md",
+                                className: "w-12 px-0",
+                            })}
+                        >
                             <Github size={20} />
                         </a>
                     </div>
