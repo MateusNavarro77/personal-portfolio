@@ -33,7 +33,7 @@ const ProjectCard = ({ index, tech, github, preview, live }: ProjectCardProps) =
                     alt={`${t(`items.${index}.title`)} preview`}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                    className="object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-secondary/10" />
             </div>

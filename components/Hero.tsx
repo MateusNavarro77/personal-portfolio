@@ -10,7 +10,7 @@ const Hero = () => {
     const t = useTranslations("Hero");
 
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 bg-grid-pattern">
+        <section className="min-h-screen w-full flex flex-col justify-center items-center text-center px-4 pt-20 bg-grid-pattern">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

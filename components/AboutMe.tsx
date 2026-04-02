@@ -22,7 +22,7 @@ const AboutMe = () => {
                         src={githubAvatarFaviconUrl}
                         alt="Profile picture"
                         fill
-                        className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                        className="object-cover"
                     />
                 </div>
                 <div className="md:col-span-7 bg-surface-container-low rounded-3xl p-8 md:p-10">
