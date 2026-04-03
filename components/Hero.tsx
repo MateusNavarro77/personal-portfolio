@@ -5,13 +5,18 @@ import { ArrowRight, Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { buttonVariants } from "./Button";
+import dynamic from "next/dynamic";
+
+const FlutterLogo3D = dynamic(() => import("./FlutterLogo3D"), { ssr: false });
 
 const Hero = () => {
     const t = useTranslations("Hero");
 
     return (
-        <section className="min-h-screen w-full flex flex-col justify-center items-center text-center px-4 pt-20 bg-grid-pattern">
+        <section className="min-h-screen w-full flex flex-col justify-center items-center text-center px-4 pt-20 bg-grid-pattern relative overflow-hidden">
+            <FlutterLogo3D />
             <motion.div
+                className="z-10 relative"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
