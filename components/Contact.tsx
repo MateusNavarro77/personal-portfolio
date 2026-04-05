@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { buttonVariants } from "./Button";
+import Image from "next/image";
 
 const Contact = () => {
     const t = useTranslations("Contact");
@@ -30,30 +31,36 @@ const Contact = () => {
                         {t("emailMe")}
                     </a>
                     <div className="flex gap-4">
-                        <a
+                        <a href="https://www.linkedin.com/in/mateus-navarro-910673298/" target="_blank" rel="noopener noreferrer">
+                            <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
+                        </a>
+                        {/* <a
                             target="_blank"
                             rel="noreferrer"
                             href="https://www.linkedin.com/in/mateus-navarro-910673298/"
                             className={buttonVariants({
                                 variant: "secondary",
                                 size: "md",
-                                className: "w-12 px-0",
+                                className: "w-12 px-6",
                             })}
                         >
-                            <Linkedin size={20} />
+                            Linkedin
+                        </a> */}
+                        <a href="https://github.com/MateusNavarro77" target="_blank" rel="noopener noreferrer">
+                            <Image src="/github.svg" alt="GitHub" width={24} height={24} />
                         </a>
-                        <a
+                        {/* <a
                             target="_blank"
                             rel="noreferrer"
                             href="https://github.com/MateusNavarro77"
                             className={buttonVariants({
                                 variant: "secondary",
                                 size: "md",
-                                className: "w-12 px-0",
+                                className: "w-12 px-6",
                             })}
                         >
-                            <Github size={20} />
-                        </a>
+                            Github
+                        </a> */}
                     </div>
                 </div>
             </motion.div>
