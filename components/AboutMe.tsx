@@ -8,7 +8,7 @@ const AboutMe = () => {
     const t = useTranslations("About");
 
     return (
-        <section id="about" className="py-24 px-4 max-w-5xl mx-auto w-full">
+        <section id="about" className="py-24 px-4  mx-auto w-full bg-primary  text-white ">
 
             <motion.div
                 initial={{ opacity: 0 }}
@@ -25,9 +25,9 @@ const AboutMe = () => {
                         className="object-cover"
                     />
                 </div>
-                <div className="md:col-span-7 bg-surface-container-low rounded-3xl p-8 md:p-10">
-                    <h2 className="font-display text-4xl md:text-[2.25rem] font-bold tracking-tight mb-8">{t("title")}</h2>
-                    <div className="space-y-6 text-lg text-foreground/70">
+                <div className="md:col-span-7 rounded-3xl p-8 md:p-10">
+                    <h2 className="font-display text-4xl md:text-[2.25rem] font-bold tracking-tight mb-8 text-white">{t("title")}</h2>
+                    <div className="space-y-6 text-lg text-white/80">
                         <p>
                             {t("p1")}
                         </p>
