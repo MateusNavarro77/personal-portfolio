@@ -92,7 +92,7 @@ const FlutterLogo = () => {
             const targetRotationZ = -progress * 0.25;
 
             // 4. Position shifts: Logo moves slightly up and closer to camera as you scroll down
-            const targetPositionY = -0.2 + progress * 0.6 + idlePositionY;
+            const targetPositionY = 0.1 + progress * 0.5 + idlePositionY;
             const targetPositionZ = progress * 1.8;
             const targetPositionX = progress * 0.3;
 
@@ -109,7 +109,7 @@ const FlutterLogo = () => {
 
     // The scale and positioning center the perfectly extracted SVG coordinates.
     return (
-        <group ref={groupRef} scale={[0.9, 0.9, 0.9]} position={[0, -0.2, 0]} rotation={[0, -Math.PI / 12, 0]}>
+        <group ref={groupRef} scale={[0.85, 0.85, 0.85]} position={[0, 0.1, 0]} rotation={[0, -Math.PI / 12, 0]}>
             {/* Top Light Blue Wing */}
             <mesh position={[0, 0, 0]}>
                 <extrudeGeometry args={[topWing, extrudeSettings]} />
@@ -139,7 +139,7 @@ const FlutterLogo = () => {
 
 export default function FlutterLogo3D({ className = "" }: { className?: string }) {
     return (
-        <div className={`w-full h-full min-h-[360px] sm:min-h-[450px] lg:min-h-[550px] relative flex justify-center items-center select-none pointer-events-none ${className}`}>
+        <div className={`w-full h-full min-h-[360px] sm:min-h-[450px] lg:min-h-[550px] relative flex justify-center items-center select-none pointer-events-none overflow-visible ${className}`}>
             <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
                 <React.Suspense fallback={null}>
                     {/* Lighting Setup */}
@@ -153,7 +153,7 @@ export default function FlutterLogo3D({ className = "" }: { className?: string }
                     </Float>
                     
                     <Environment preset="city" />
-                    <ContactShadows position={[0, -2.2, 0]} opacity={0.5} scale={12} blur={2.5} far={4} />
+                    <ContactShadows position={[0, -1.5, 0]} opacity={0.45} scale={20} blur={2.5} far={10} />
                 </React.Suspense>
             </Canvas>
         </div>
