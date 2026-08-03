@@ -23,7 +23,9 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-24 px-4 max-w-5xl mx-auto w-full">
-            <h2 className="font-display text-4xl md:text-[2.25rem] font-bold tracking-tight mb-12 text-center md:text-left">{t("title")}</h2>
+            <h2 className="headline-lg mb-12 text-center md:text-left text-foreground">
+                {t("title")}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                 {PROJECTS_METADATA.map((project, index) => (
                     <div key={index} className={index % 2 === 0 ? "md:col-span-7" : "md:col-span-5"}>

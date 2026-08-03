@@ -11,7 +11,9 @@ const Experience = () => {
 
     return (
         <section id="experience" className="py-24 px-4 max-w-3xl mx-auto w-full">
-            <h2 className="font-display text-4xl md:text-[2.25rem] font-bold tracking-tight mb-12">{t("title")}</h2>
+            <h2 className="headline-lg mb-12 text-foreground">
+                {t("title")}
+            </h2>
             <div className="space-y-12">
                 {experienceIndices.map((index) => (
                     <motion.div
@@ -19,12 +21,12 @@ const Experience = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative pl-8 bg-surface-container-low rounded-3xl p-6"
+                        className="relative pl-8 bg-surface-container-lowest border border-outline-variant/15 rounded-xl p-6 shadow-ambient"
                     >
                         <div className="absolute left-3 top-8 h-[calc(100%-3rem)] w-px bg-outline-variant/15" />
                         <div className="absolute left-2.5 top-8 w-2.25 h-2.25 bg-primary rounded-full" />
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-4">
-                            <h3 className="font-bold text-xl">{t(`items.${index}.role`)}</h3>
+                            <h3 className="title-md text-foreground">{t(`items.${index}.role`)}</h3>
                             <span className="text-sm font-medium text-foreground/55">{t(`items.${index}.period`)}</span>
                         </div>
                         <p className="font-medium text-foreground/75 mb-4">{t(`items.${index}.company`)}</p>

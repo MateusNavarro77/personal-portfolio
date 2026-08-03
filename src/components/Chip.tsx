@@ -7,7 +7,7 @@ type ChipProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 const baseClass =
-    "inline-flex items-center rounded-full px-3 py-1.5 text-[10px] uppercase tracking-[0.16em] font-semibold transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]";
+    "inline-flex items-center rounded-full px-3 py-1.5 label-sm transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]";
 
 const variants: Record<ChipVariant, string> = {
     default:

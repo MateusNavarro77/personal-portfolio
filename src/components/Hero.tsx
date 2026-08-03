@@ -21,10 +21,10 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h1 className="font-display text-5xl md:text-7xl font-extrabold tracking-[-0.05em] mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
+                <h1 className="display-hero mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary px-4">
                     {t("title")}
                 </h1>
-                <p className="text-xl md:text-2xl text-foreground/70 max-w-2xl mb-10 leading-relaxed">
+                <p className="body-lg md:text-xl text-foreground/75 max-w-2xl mb-10">
                     {t("description")}
                 </p>
 

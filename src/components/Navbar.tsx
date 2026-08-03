@@ -27,10 +27,11 @@ const Navbar = () => {
             <div className="max-w-5xl mx-auto px-5 md:px-6 w-full h-16 flex items-center justify-between kinetic-glass rounded-full shadow-ambient border border-outline-variant/15 relative">
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex gap-6 lg:gap-8 text-[11px] font-semibold uppercase tracking-[0.14em]">
+                <div className="hidden md:flex gap-6 lg:gap-8 label-sm">
                     {menuItems.map((item) => (
                         <Link
                             key={item.href}
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
                             href={item.href as any}
                             className="hover:text-primary transition-colors duration-500"
                         >
@@ -64,6 +65,7 @@ const Navbar = () => {
                             {menuItems.map((item) => (
                                 <Link
                                     key={item.href}
+                                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                     href={item.href as any}
                                     onClick={() => setIsOpen(false)}
                                     className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors px-2 py-1"
