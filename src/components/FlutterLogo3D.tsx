@@ -59,61 +59,101 @@ const extrudeSettings = {
 
 const FlutterLogo = () => {
     const groupRef = useRef<THREE.Group>(null);
+    const currentScroll = useRef(0);
 
     useFrame((state) => {
         if (groupRef.current) {
-            // Gentle hovering and floating rotation
-            groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
-            groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.15;
+            // Read current scroll position safely
+            const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
+            const maxScroll = typeof window !== "undefined" ? Math.max(1, window.innerHeight * 1.2) : 800;
+            // Calculate progress (0 at top of page, 1+ as you scroll past hero)
+            const targetProgress = Math.min(1.5, Math.max(0, scrollY / maxScroll));
+
+            // Smoothly lerp our tracked scroll progress towards targetProgress
+            currentScroll.current = THREE.MathUtils.lerp(
+                currentScroll.current,
+                targetProgress,
+                0.08
+            );
+
+            const progress = currentScroll.current;
+
+            // Combine gentle idle hovering animation with kinetic scroll-driven 3D rotation & movement
+            const idleRotationY = Math.sin(state.clock.elapsedTime * 0.5) * 0.15;
+            const idleRotationX = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
+            const idlePositionY = Math.sin(state.clock.elapsedTime * 0.8) * 0.08;
+
+            // Scroll-driven transformations:
+            // 1. Rotation Y: Complete 3D turn as user scrolls down/up
+            const targetRotationY = -Math.PI / 12 + progress * Math.PI * 2 + idleRotationY;
+            // 2. Rotation X: Kinetic pitch forward and back
+            const targetRotationX = Math.sin(progress * Math.PI) * 0.35 + idleRotationX;
+            // 3. Rotation Z: Aerodynamic bank angle
+            const targetRotationZ = -progress * 0.25;
+
+            // 4. Position shifts: Logo moves slightly up and closer to camera as you scroll down
+            const targetPositionY = 0.1 + progress * 0.5 + idlePositionY;
+            const targetPositionZ = progress * 1.8;
+            const targetPositionX = progress * 0.3;
+
+            // Apply smoothly
+            groupRef.current.rotation.y = targetRotationY;
+            groupRef.current.rotation.x = targetRotationX;
+            groupRef.current.rotation.z = targetRotationZ;
+
+            groupRef.current.position.y = targetPositionY;
+            groupRef.current.position.z = targetPositionZ;
+            groupRef.current.position.x = targetPositionX;
         }
     });
 
     // The scale and positioning center the perfectly extracted SVG coordinates.
     return (
-        <group ref={groupRef} scale={[0.8, 0.8, 0.8]} position={[0, -0.2, 0]} rotation={[0, -Math.PI / 12, 0]}>
+        <group ref={groupRef} scale={[0.85, 0.85, 0.85]} position={[0, 0.1, 0]} rotation={[0, -Math.PI / 12, 0]}>
             {/* Top Light Blue Wing */}
             <mesh position={[0, 0, 0]}>
                 <extrudeGeometry args={[topWing, extrudeSettings]} />
-                <meshStandardMaterial color="#54C5F8" roughness={0.2} metalness={0.5} />
+                <meshStandardMaterial color="#54C5F8" roughness={0.15} metalness={0.4} />
             </mesh>
 
             {/* Middle Diamond Wing */}
             <mesh position={[0, 0, 0.08]}>
                 <extrudeGeometry args={[bottomWingMiddle, extrudeSettings]} />
-                <meshStandardMaterial color="#29B6F6" roughness={0.2} metalness={0.5} />
+                <meshStandardMaterial color="#29B6F6" roughness={0.15} metalness={0.4} />
             </mesh>
 
             {/* Bottom Right Light Blue Wing */}
             <mesh position={[0, 0, 0.16]}>
                 <extrudeGeometry args={[bottomWingLightBlue, extrudeSettings]} />
-                <meshStandardMaterial color="#54C5F8" roughness={0.2} metalness={0.5} />
+                <meshStandardMaterial color="#54C5F8" roughness={0.15} metalness={0.4} />
             </mesh>
 
             {/* Bottom Shadow Wing */}
             <mesh position={[0, 0, 0.08]}>
                 <extrudeGeometry args={[shadowDarkBlue, extrudeSettings]} />
-                <meshStandardMaterial color="#01579B" roughness={0.3} metalness={0.4} />
+                <meshStandardMaterial color="#01579B" roughness={0.25} metalness={0.4} />
             </mesh>
         </group>
     );
 };
 
-export default function FlutterLogo3D() {
+export default function FlutterLogo3D({ className = "" }: { className?: string }) {
     return (
-        <div className="absolute inset-0 z-0 pointer-events-none w-full h-full opacity-60 flex justify-center items-center">
+        <div className={`w-full h-full min-h-[360px] sm:min-h-[450px] lg:min-h-[550px] relative flex justify-center items-center select-none pointer-events-none overflow-visible ${className}`}>
             <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
                 <React.Suspense fallback={null}>
                     {/* Lighting Setup */}
                     <ambientLight intensity={0.6} />
                     <directionalLight position={[10, 10, 5]} intensity={1.5} color="#ffffff" />
                     <directionalLight position={[-10, -10, -5]} intensity={0.5} color="#54C5F8" />
+                    <directionalLight position={[0, 5, -5]} intensity={0.8} color="#29B6F6" />
                     
-                    <Float speed={2.5} rotationIntensity={0.6} floatIntensity={2}>
+                    <Float speed={1.5} rotationIntensity={0.3} floatIntensity={1.2}>
                         <FlutterLogo />
                     </Float>
                     
                     <Environment preset="city" />
-                    <ContactShadows position={[0, -3.5, 0]} opacity={0.5} scale={15} blur={2.5} far={4} />
+                    <ContactShadows position={[0, -1.5, 0]} opacity={0.45} scale={20} blur={2.5} far={10} />
                 </React.Suspense>
             </Canvas>
         </div>
