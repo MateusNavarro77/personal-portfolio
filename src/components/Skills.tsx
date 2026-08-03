@@ -15,7 +15,9 @@ const Skills = () => {
 
     return (
         <section id="skills" className="py-24 px-4 max-w-5xl mx-auto w-full">
-            <h2 className="font-display text-4xl md:text-[2.25rem] font-bold tracking-tight mb-12">{t("title")}</h2>
+            <h2 className="headline-lg mb-12 text-foreground">
+                {t("title")}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {Object.entries(SKILLS).map(([category, skills], index) => (
                     <motion.div
@@ -24,10 +26,10 @@ const Skills = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className="bg-surface-container-low rounded-3xl p-6"
+                        className="bg-surface-container-lowest border border-outline-variant/15 rounded-xl p-6 shadow-ambient"
                     >
                         {/* Note: We could translate categories if we add them to messages */}
-                        <h3 className="font-display font-bold text-xl mb-4 text-foreground">{category}</h3>
+                        <h3 className="title-md mb-4 text-foreground">{category}</h3>
                         <div className="flex flex-wrap gap-2">
                             {skills.map((skill) => (
                                 <Chip key={skill}>

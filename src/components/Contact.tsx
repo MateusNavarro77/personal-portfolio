@@ -15,10 +15,12 @@ const Contact = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-surface-container-low border border-outline-variant/15 p-12 rounded-3xl shadow-ambient"
+                className="bg-surface-container-lowest border border-outline-variant/15 p-12 rounded-xl shadow-ambient"
             >
-                <h2 className="font-display text-3xl font-bold tracking-tight mb-4">{t("title")}</h2>
-                <p className="text-lg text-foreground/70 mb-8 max-w-md mx-auto">
+                <h2 className="headline-lg mb-4 text-foreground">
+                    {t("title")}
+                </h2>
+                <p className="body-lg text-foreground/75 mb-8 max-w-md mx-auto">
                     {t("description")}
                 </p>
 

@@ -56,7 +56,7 @@
                 "points": [
                     "Desenvolvi soluções em smart contracts para empresas utilizando bibliotecas profissionais como OpenZeppelin.",
                     "Realizei testes unitários e de integração de smart contracts com frameworks como Hardhat e Truffle para garantir a qualidade do código.",
-                    "Efetuei o deploy de smart contracts em redes de teste (Fantom, Sepolia) e em redes principais como Polygon."
+                    "Efetuei o deploy de smart contracts em redes de teste (Fantom, Sepolia) and em redes principais como Polygon."
                 ]
             }
         ]
