@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Chip from "./Chip";
 import SimpleIcon from "./SimpleIcon";
-import { getTechIcon } from "@/utils/techIcons";
+import { getTechIcon, getTechColor } from "@/utils/techIcons";
 
 const SKILLS = {
     "Languages": ["Dart", "Solidity", "TypeScript", "Java", "JavaScript"],
@@ -37,11 +37,13 @@ const Skills = () => {
                         <div className="flex flex-wrap gap-2.5">
                             {skills.map((skill) => {
                                 const icon = getTechIcon(skill);
+                                const brandColor = getTechColor(skill);
                                 return (
                                     <Chip
                                         key={skill}
-                                        icon={icon ? <SimpleIcon icon={icon} size={14} /> : undefined}
+                                        icon={icon ? <SimpleIcon icon={icon} size={14} color={brandColor || undefined} /> : undefined}
                                         dot={!icon}
+                                        dotColor={brandColor || undefined}
                                     >
                                         {skill}
                                     </Chip>

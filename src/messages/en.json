@@ -31,6 +31,10 @@
             {
                 "title": "Metronome",
                 "description": "Metronome was created to offer a \"clean,\" uninterrupted experience. Just open it, set the tempo, and start practicing. No in-app purchases, no pop-ups, and no complicated features. Just what you need to master your rhythm."
+            },
+            {
+                "title": "Cybersec Task Manager",
+                "description": "Academic project developed for Computer Engineering with a primary focus on building an end-to-end DevSecOps pipeline, from secure development to VPS production deployment. The Spring Boot REST API implements JWT authentication, per-user data isolation, unit and integration tests with Testcontainers, static analysis (SAST) with Sonar and OWASP Dependency-Check, dynamic testing (DAST) with OWASP ZAP, and observability with Prometheus and Grafana."
             }
         ]
     },

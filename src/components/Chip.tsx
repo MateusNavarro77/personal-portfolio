@@ -6,6 +6,7 @@ type ChipProps = React.HTMLAttributes<HTMLSpanElement> & {
     variant?: ChipVariant;
     icon?: React.ReactNode;
     dot?: boolean;
+    dotColor?: string;
 };
 
 const baseClass =
@@ -24,6 +25,7 @@ export default function Chip({
     variant = "default",
     icon,
     dot = false,
+    dotColor,
     className = "",
     children,
     ...props
@@ -31,9 +33,12 @@ export default function Chip({
     return (
         <span className={[baseClass, variants[variant], className].join(" ")} {...props}>
             {icon ? (
-                <span className="shrink-0 flex items-center justify-center text-primary">{icon}</span>
+                <span className="shrink-0 flex items-center justify-center">{icon}</span>
             ) : dot ? (
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 animate-pulse" />
+                <span
+                    className={`w-1.5 h-1.5 rounded-full shrink-0 animate-pulse ${!dotColor ? "bg-primary" : ""}`}
+                    style={dotColor ? { backgroundColor: dotColor } : undefined}
+                />
             ) : null}
             <span>{children}</span>
         </span>

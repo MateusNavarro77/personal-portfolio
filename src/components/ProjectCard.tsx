@@ -8,7 +8,7 @@ import Chip from "./Chip";
 import { buttonVariants } from "./Button";
 import Image from "next/image";
 import SimpleIcon from "./SimpleIcon";
-import { getTechIcon } from "@/utils/techIcons";
+import { getTechIcon, getTechColor } from "@/utils/techIcons";
 
 interface ProjectCardProps {
     index: number;
@@ -53,11 +53,13 @@ const ProjectCard = ({ index, tech, github, preview, live }: ProjectCardProps) =
                     <div className="flex flex-wrap gap-2 mb-6">
                         {tech.map((item) => {
                             const icon = getTechIcon(item);
+                            const brandColor = getTechColor(item);
                             return (
                                 <Chip
                                     key={item}
-                                    icon={icon ? <SimpleIcon icon={icon} size={13} /> : undefined}
+                                    icon={icon ? <SimpleIcon icon={icon} size={13} color={brandColor || undefined} /> : undefined}
                                     dot={!icon}
+                                    dotColor={brandColor || undefined}
                                 >
                                     {item}
                                 </Chip>
