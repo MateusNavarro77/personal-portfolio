@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
+import OpenSource from "@/components/OpenSource";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
@@ -16,12 +17,15 @@ export default function Home() {
         <Projects />
       </div>
       <div className="w-full bg-surface-container-low">
-        <Skills />
+        <OpenSource />
       </div>
       <div className="w-full bg-background">
-        <Experience />
+        <Skills />
       </div>
       <div className="w-full bg-surface-container-low">
+        <Experience />
+      </div>
+      <div className="w-full bg-background">
         <Contact />
       </div>
     </div>

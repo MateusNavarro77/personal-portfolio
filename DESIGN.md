@@ -1,148 +1,162 @@
 ---
-name: Kinetic Obsidian
+name: Flutter Sky Tech Portfolio
 colors:
-  surface: '#f8f9fa'
-  surface-dim: '#d9dadb'
-  surface-bright: '#f8f9fa'
-  surface-container-lowest: '#ffffff'
-  surface-container-low: '#f3f4f5'
-  surface-container: '#edeeef'
-  surface-container-high: '#e7e8e9'
-  surface-container-highest: '#e1e3e4'
-  on-surface: '#191c1d'
-  on-surface-variant: '#414751'
-  inverse-surface: '#2e3132'
-  inverse-on-surface: '#f0f1f2'
-  outline: '#727783'
-  outline-variant: rgba(0, 93, 172, 0.15)
-  surface-tint: '#065fae'
-  primary: '#004583'
-  on-primary: '#ffffff'
-  primary-container: '#005dac'
-  on-primary-container: '#bfd7ff'
-  inverse-primary: '#a6c8ff'
-  secondary: '#005db7'
-  on-secondary: '#ffffff'
-  secondary-container: '#64a1ff'
-  on-secondary-container: '#003670'
-  tertiary: '#0e4a61'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#2e627a'
-  on-tertiary-container: '#aadcf8'
-  error: '#ba1a1a'
-  on-error: '#ffffff'
-  error-container: '#ffdad6'
-  on-error-container: '#93000a'
-  primary-fixed: '#d4e3ff'
-  primary-fixed-dim: '#a6c8ff'
-  on-primary-fixed: '#001c3a'
-  on-primary-fixed-variant: '#004786'
-  secondary-fixed: '#d6e3ff'
-  secondary-fixed-dim: '#a9c7ff'
-  on-secondary-fixed: '#001b3d'
-  on-secondary-fixed-variant: '#00468c'
-  tertiary-fixed: '#c1e8ff'
-  tertiary-fixed-dim: '#9bcde9'
-  on-tertiary-fixed: '#001e2b'
-  on-tertiary-fixed-variant: '#124c64'
-  background: '#f8f9fa'
-  on-background: '#191c1d'
-  surface-variant: '#e1e3e4'
-  surface-lowest: '#ffffff'
-  accent-fidelity: '#005eb8'
+  surface: '#101418'
+  surface-dim: '#101418'
+  surface-bright: '#36393f'
+  surface-container-lowest: '#0b0e13'
+  surface-container-low: '#181c21'
+  surface-container: '#1c2025'
+  surface-container-high: '#272a2f'
+  surface-container-highest: '#32353a'
+  on-surface: '#e0e2e9'
+  on-surface-variant: '#c0c7d3'
+  inverse-surface: '#e0e2e9'
+  inverse-on-surface: '#2d3136'
+  outline: '#8a919c'
+  outline-variant: '#404751'
+  surface-tint: '#9dcaff'
+  primary: '#9dcaff'
+  on-primary: '#003258'
+  primary-container: '#3f95e4'
+  on-primary-container: '#002b4d'
+  inverse-primary: '#0061a3'
+  secondary: '#aec9ec'
+  on-secondary: '#16324e'
+  secondary-container: '#2e4866'
+  on-secondary-container: '#9db7da'
+  tertiary: '#ffb783'
+  on-tertiary: '#4f2500'
+  tertiary-container: '#d77826'
+  on-tertiary-container: '#452000'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#d1e4ff'
+  primary-fixed-dim: '#9dcaff'
+  on-primary-fixed: '#001d36'
+  on-primary-fixed-variant: '#00497c'
+  secondary-fixed: '#d1e4ff'
+  secondary-fixed-dim: '#aec9ec'
+  on-secondary-fixed: '#001d36'
+  on-secondary-fixed-variant: '#2e4866'
+  tertiary-fixed: '#ffdcc5'
+  tertiary-fixed-dim: '#ffb783'
+  on-tertiary-fixed: '#301400'
+  on-tertiary-fixed-variant: '#703700'
+  background: '#101418'
+  on-background: '#e0e2e9'
+  surface-variant: '#32353a'
 typography:
   display-hero:
     fontFamily: Plus Jakarta Sans
-    fontSize: 72px
+    fontSize: 56px
     fontWeight: '800'
-    lineHeight: '1.1'
-    letterSpacing: -0.05em
-  display-hero-mobile:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 48px
-    fontWeight: '800'
-    lineHeight: '1.2'
-    letterSpacing: -0.05em
-  headline-lg:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 36px
-    fontWeight: '700'
-    lineHeight: '1.2'
-  title-lg:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 30px
-    fontWeight: '700'
-    lineHeight: '1.3'
-  title-md:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 24px
-    fontWeight: '700'
-    lineHeight: '1.3'
+    lineHeight: 64px
+    letterSpacing: -0.03em
   body-lg:
     fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.6'
-  label-md:
-    fontFamily: Inter
+    lineHeight: 28px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
     fontSize: 14px
     fontWeight: '600'
-    lineHeight: '1.4'
-  label-sm:
-    fontFamily: Inter
-    fontSize: 10px
-    fontWeight: '700'
-    lineHeight: '1.0'
-    letterSpacing: 0.1em
+    lineHeight: 20px
+    letterSpacing: 0.01em
 rounded:
-  sm: 0.25rem
-  DEFAULT: 0.5rem
-  md: 0.75rem
-  lg: 1rem
-  xl: 1.5rem
+  sm: 0.5rem
+  DEFAULT: 1rem
+  md: 1.5rem
+  lg: 2rem
+  xl: 3rem
   full: 9999px
 spacing:
-  container-max: 1440px
   gutter: 1.5rem
-  margin-desktop: 3rem
+  gutter-mobile: 1rem
+  margin: 3rem
   margin-mobile: 1.25rem
-  grid-unit: 4px
+  space-xs: 0.375rem
+  space-sm: 0.75rem
+  space-md: 1.25rem
+  space-lg: 2rem
+  space-xl: 3.5rem
 ---
 
 ## Brand & Style
-The design system is centered on the "Kinetic Architect" north star—a fusion of high-performance technical clarity and editorial sophistication. It targets a professional audience that values precision, motion, and architectural depth. 
 
-The aesthetic is a sophisticated blend of **Modern Minimalism** and **Glassmorphism**, characterized by intentional asymmetry and a "built" rather than "templated" feel. The interface rejects standard dashboard rigidness in favor of fluid layouts, using subtle grid-based background patterns to suggest blueprinting and engineering precision. The emotional response is one of trust, innovation, and deliberate craftsmanship.
+This design system establishes a high-performance, polished developer persona rooted in the vibrant geometric modernism of the Flutter ecosystem. Tailored for senior engineers and cross-platform creators, the aesthetic delivers architectural rigor balanced with electric creative energy.
+
+The aesthetic fuses **Glassmorphism** with **Atmospheric Ambient Tech**. It abandons sterile, desaturated flat-grays in favor of deep midnight-indigo canvases, translucent frosted vitreous panels, and concentrated chromatic gradients spanning from Flutter Sky to radiant Electric Cyan. Micro-interactions utilize soft neon ambient luminescence, sharp structural borders, and refined typographic contrast to evoke craftsmanship, responsiveness, and engineering precision.
 
 ## Colors
-The palette utilizes a high-fidelity blue spectrum to communicate expertise. The structural core is built on the primary blue, while secondary tones provide depth for container accents.
 
-A "No-Line" rule is strictly enforced: sectioning must be achieved through background transitions (shifting between surface tiers) rather than solid borders. If a boundary is functionally required, use the `outline-variant` at 15% opacity. Surfaces follow a hierarchy where `surface-lowest` (#FFFFFF) is used for floating cards to maximize contrast against the `background` (#F8F9FA). Glassmorphic elements, such as navigation, utilize a 70% white opacity fill with a 20px backdrop blur.
+The palette is engineered around dark-mode-first structural contrast, evoking an IDE-inspired studio feel electrified by signature Flutter chromatic transitions:
+
+- **Primary (`#157BC8` - Electric Cyan)**: Drives core focal points, major interactive states, and glowing brand cues.
+- **Secondary (`#5F7999` - Slate Blue)**: Highlights, gradient stops, active badge borders, and illuminated hover states.
+- **Tertiary (`#B05A00` - Amber Accent)**: Accents code syntax, interactive metric callouts, and secondary visual tags.
+- **Neutral (`#74777D` - Structured Neutral)**: Canvas foundation providing infinite depth, paired with deep slate-navy tones for structural grouping.
+
+Apply gradients as directional accents (`135deg` from `#157BC8` to `#5F7999`) across primary buttons, hero text masks, and subtle 1px card borders. Never allow washed-out monochromatic gray to form structural surfaces.
 
 ## Typography
-This design system employs a dual-font strategy: **Plus Jakarta Sans** for high-impact, geometric headlines and **Inter** for technical body and label text. 
 
-Asymmetry and motion are introduced typographically through the selective use of *italics* within headlines to break rigid structures. Large display text uses tight tracking (-0.05em) to appear "locked" and architectural. Metadata and chips utilize the `label-sm` style, which is uppercase with wide tracking to ensure clarity at small scales without cluttering the visual field.
+Typography pairs **Plus Jakarta Sans** for expressive, geometric headers and tactical labels with **Inter** for readable, neutral body copy and technical parameters:
+
+- **Hero & Headings**: Styled with tight letter-spacing and heavy weights (700–800) to echo modern software engineering interfaces and progressive web apps.
+- **Body & Longform**: Formatted in Inter at regular weight (400) to optimize scanning speeds across case studies, architecture notes, and bio write-ups.
+- **Labels & Badges**: Set in uppercase or condensed tracking using Plus Jakarta Sans bold to frame pill metadata, stack chips, and build markers crisply.
 
 ## Layout & Spacing
-The layout philosophy is rooted in **intentional asymmetry**. Instead of centered or perfectly mirrored columns, use off-balance splits (e.g., a 5-column vs 7-column division) to create dynamic tension. 
 
-The system utilizes a 12-column fluid grid for desktop with 24px gutters. For hero sections, a radial-gradient grid pattern is layered into the background to establish the technical "architect" theme. On mobile, the layout reflows to a single column with 20px side margins, maintaining the large typographic anchors. Vertical spacing should follow a strict 4px/8px rhythm to reinforce the precision-engineered feel.
+The architecture operates on an adaptive 12-column grid system built around a maximum content container of `1240px`:
+
+- **Desktop (1024px+)**: 12-column grid with `1.5rem` gutters and outer canvas margins of `3rem`. Elements span asymmetric blocks (e.g., 7/5 splits for portfolio showcases).
+- **Tablet (768px – 1023px)**: 8-column layout with `1.25rem` gutters and `2rem` outer padding. Two-up project cards reflow gracefully.
+- **Mobile (< 768px)**: 4-column layout collapsing into a unified vertical flow. Gutters tighten to `1rem` and section canvas margins scale to `1.25rem` with a minimum touch-target perimeter of `48px`.
+
+Vertical cadence utilizes geometric spacing increments (`space-sm` for chip clusters, `space-md` for interior card padding, and `space-xl` for section anchors) to sustain momentum across project deep dives.
 
 ## Elevation & Depth
-Depth is established through **Tonal Layering** rather than heavy shadows. The hierarchy is created by stacking lighter surfaces (`surface-lowest`) onto slightly darker backgrounds (`background`).
 
-When shadows are necessary for floating elements, they must be highly diffused and ambient: `0 20px 25px -5px rgba(0, 0, 0, 0.1)`. Interactive elements like buttons and cards should "lift" upon hover using a primary-tinted shadow (a 20% opacity primary color) to signal state changes. Glassmorphic layers provide a final tier of elevation, used exclusively for persistent navigation and overlays.
+Visual hierarchy abandons traditional muddy drop shadows in favor of luminous vitreous stacking and optical glow diffusion:
+
+1. **Base Layer (Canvas)**: Solid deep night surface (`#74777D`) with subtle radial gradients of `#157BC8` at 12% opacity positioned behind hero sections.
+2. **Glassmorphic Substratum (Panels & Cards)**: Background `rgba(13, 24, 41, 0.65)` layered with `backdrop-filter: blur(16px)` and an inner bounding hairline stroke of `1px solid rgba(95, 121, 153, 0.15)`.
+3. **Elevated Floating States (Hover & Modals)**: Surfaces lift with dual-shadow telemetry:
+   - Ambient structural shadow: `0 12px 32px rgba(2, 43, 95, 0.45)`.
+   - Cyan aura edge: `0 0 24px rgba(95, 121, 153, 0.22)`.
+4. **Focused Accent Depth**: Interactive buttons project a direct downward cyan halo (`0 4px 20px rgba(21, 123, 200, 0.5)`) conveying tactile activation.
 
 ## Shapes
-The shape language is defined by significant roundedness to offset the technical "grid" nature of the layout. 
 
-While the base roundedness is 8px (0.5rem), the design system leans heavily into `rounded-xl` (24px) for cards and `rounded-full` (pill-shaped) for interactive components like buttons and navigation bars. Sharp 90-degree corners are strictly prohibited; every element must feel "machined" and smooth.
+The design uses generous pill-shaped and highly rounded geometries (`level 3`) to maintain high software fluidity and an approachable, contemporary technical feel:
+
+- **Base Cards & Modules**: `1rem` (`16px`) to `2rem` (`32px`) radius, creating exceptionally smooth, structured frames for tech showcases.
+- **Pills & Badges**: Fully rounded (`9999px`) pill styling for tech stack identifiers (e.g., "Flutter", "Dart", "TypeScript"), status beacons, and notification tags.
+- **Buttons & Text Fields**: Softly rounded `1rem` (`16px`) to `1.5rem` (`24px`) rounding to harmonize with card geometry while prioritizing friendly finger/cursor engagement.
 
 ## Components
-- **Buttons:** Use fully rounded (pill-shaped) geometry. Primary buttons feature a solid fill; secondary buttons use a high-tier surface background with a subtle 15% opacity outline.
-- **Cards:** Defined by 24px (3xl) corner radii and `surface-lowest` backgrounds. Transition effects for hover states must be long (500ms) and fluid to match the "kinetic" theme.
-- **Chips:** Highly technical; use 10px uppercase text with wide tracking. These are used sparingly for categorization.
-- **Navigation:** A floating, glassmorphic bar with internal padding and full-pill rounding. It should blur the content beneath it to maintain focus.
-- **Input Fields:** Minimalist with soft 8px corners. Focus states should transition the border color to primary or use a subtle tinted inner glow rather than a heavy outer stroke.
-- **Visuals:** Grayscale image filters should be applied by default, transitioning to full color on hover for a sophisticated "reveal" effect.
+
+### Buttons
+- **Primary Action**: Gradient background (`linear-gradient(135deg, #157BC8, #5F7999)`), solid high-contrast bold text, `16px` border radius, subtle hover glow (`box-shadow: 0 0 18px rgba(95, 121, 153, 0.45)`).
+- **Secondary / Glass Action**: Translucent surface (`rgba(95, 121, 153, 0.08)`), crisp border (`1px solid rgba(95, 121, 153, 0.3)`), `#F8F9FA` text, transition to light-cyan fill on hover.
+
+### Chips & Pill Badges
+- **Skill / Technology Tag**: Full pill geometry (`rounded-full`), padded with `0.375rem 0.875rem`, surface `rgba(2, 43, 95, 0.5)`, label set in `label-sm` with a secondary cyan prefix indicator dot (`4px`).
+- **Status Indicator**: Semi-transparent green or cyan capsule incorporating a pulsing glow keyframe for live availability markers ("Available for contracts").
+
+### Cards & Project Showcases
+- Frosted glass finish with `16px` backdrop blur, structural `1px` gradient border shifting from cyan to indigo.
+- Includes dynamic preview canvas, live metric badges, GitHub/Demo micro-actions, and continuous surface illumination on desktop pointer hover.
+
+### Form Inputs
+- Sleek field wells tinted in `rgba(13, 24, 41, 0.8)` with `1px` borderline (`rgba(148, 163, 184, 0.2)`).
+- Active focus state triggers an immediate transition to `border-color: #5F7999` and an outer ring glow of `rgba(95, 121, 153, 0.25)`.
+- Label typography set in `label-lg` in crisp high-contrast off-white (`#F8F9FA`).
+
+### Code Snippets & Architecture Previews
+- Terminal-inspired containers with an ultra-dark slate frame (`#020914`), mac-style status nodes, custom scrollbars tinted in Slate Blue, and syntax highlighting mapped to Electric Cyan, Amber Accent, and crisp white.

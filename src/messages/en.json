@@ -2,9 +2,11 @@
     "Navbar": {
         "about": "About",
         "projects": "Projects",
+        "openSource": "Open Source",
         "skills": "Skills",
         "experience": "Experience",
-        "contact": "Contact"
+        "contact": "Contact",
+        "downloadCv": "Download CV"
     },
     "Hero": {
         "status": "Available for internships",
@@ -30,6 +32,25 @@
             {
                 "title": "Metronome",
                 "description": "Metronome was created to offer a \"clean,\" uninterrupted experience. Just open it, set the tempo, and start practicing. No in-app purchases, no pop-ups, and no complicated features. Just what you need to master your rhythm."
+            },
+            {
+                "title": "Cybersec Task Manager",
+                "description": "Academic project developed for Computer Engineering with a primary focus on building an end-to-end DevSecOps pipeline, from secure development to VPS production deployment. The Spring Boot REST API implements JWT authentication, per-user data isolation, unit and integration tests with Testcontainers, static analysis (SAST) with Sonar and OWASP Dependency-Check, dynamic testing (DAST) with OWASP ZAP, and observability with Prometheus and Grafana."
+            }
+        ]
+    },
+    "OpenSource": {
+        "title": "Open Source",
+        "viewPr": "View Pull Request",
+        "merged": "Merged",
+        "items": [
+            {
+                "repository": "felangel/bloc",
+                "prNumber": 4821,
+                "prUrl": "https://github.com/felangel/bloc/pull/4821",
+                "title": "docs: pt-br translations for testing, migration, and FAQs",
+                "description": "Contributed to the official Bloc library repository (the most popular state management ecosystem in Flutter) by translating testing guides, migration docs, and FAQs into Brazilian Portuguese, expanding accessibility and best architectural practices for Portuguese-speaking developers.",
+                "technologies": ["Flutter", "Dart", "BLoC", "Documentation"]
             }
         ]
     },
@@ -43,6 +64,7 @@
                 "role": "Mobile Software Development Intern (Flutter)",
                 "company": "Banco do Nordeste",
                 "period": "Nov 2024 - Present",
+                "technologies": ["Flutter", "Dart", "Jenkins", "Figma", "Docusaurus"],
                 "points": [
                     "Implemented UI components designed in Figma to build a reusable Flutter component library.",
                     "Utilized Jenkins CI/CD tools to automate the testing, building, and deployment of Flutter Proof of Concepts (PoCs).",
@@ -53,6 +75,7 @@
                 "role": "Blockchain Web Developer Intern",
                 "company": "2nd Market",
                 "period": "Aug 2022 - May 2024",
+                "technologies": ["Solidity", "Hardhat", "Ethereum", "Polygon", "Web3"],
                 "points": [
                     "Developed smart contract solutions for companies using professional libraries such as OpenZeppelin.",
                     "Performed unit and integration testing for smart contracts using Hardhat and Truffle frameworks to ensure code quality.",

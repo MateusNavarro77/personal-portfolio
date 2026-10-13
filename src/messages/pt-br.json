@@ -2,9 +2,11 @@
     "Navbar": {
         "about": "Sobre",
         "projects": "Projetos",
+        "openSource": "Open Source",
         "skills": "Habilidades",
         "experience": "Experiência",
-        "contact": "Contato"
+        "contact": "Contato",
+        "downloadCv": "Baixar CV"
     },
     "Hero": {
         "status": "Disponível para estágios",
@@ -30,6 +32,25 @@
             {
                 "title": "Metrônomo",
                 "description": "O Metrônomo foi criado para oferecer uma experiência \"clean\", sem interrupções. Basta abrir, definir o tempo e começar a praticar. Sem compras no aplicativo, sem pop-ups e sem funções complicadas. Apenas o que você precisa para dominar o seu ritmo"
+            },
+            {
+                "title": "Cybersec Task Manager",
+                "description": "Projeto desenvolvido para a faculdade (Engenharia da Computação) com foco principal na construção de uma esteira DevSecOps completa, desde o desenvolvimento seguro até a produção na VPS. A API REST em Spring Boot aplica autenticação JWT, isolamento de dados por usuário, testes unitários e de integração com Testcontainers, análise estática (SAST) com Sonar e OWASP Dependency-Check, testes dinâmicos (DAST) com OWASP ZAP e observabilidade com Prometheus e Grafana."
+            }
+        ]
+    },
+    "OpenSource": {
+        "title": "Open Source",
+        "viewPr": "Ver Pull Request",
+        "merged": "Merged",
+        "items": [
+            {
+                "repository": "felangel/bloc",
+                "prNumber": 4821,
+                "prUrl": "https://github.com/felangel/bloc/pull/4821",
+                "title": "docs: pt-br translations for testing, migration, and FAQs",
+                "description": "Contribuição para o repositório oficial do pacote Bloc (o ecossistema de gerência de estado mais utilizado no Flutter), traduzindo guias de testes, documentação de migração e FAQs para Português do Brasil, fortalecendo a comunidade e facilitando o aprendizado de arquitetura limpa em Flutter.",
+                "technologies": ["Flutter", "Dart", "BLoC", "Documentação"]
             }
         ]
     },
@@ -43,6 +64,7 @@
                 "role": "Bolsista de Desenvolvimento de Software (Flutter)",
                 "company": "Banco do Nordeste",
                 "period": "Nov 2024 - presente",
+                "technologies": ["Flutter", "Dart", "Jenkins", "Figma", "Docusaurus"],
                 "points": [
                     "Implementei componentes de interface do usuário projetados no Figma para a construção de uma biblioteca de componentes reutilizáveis em Flutter.",
                     "Utilizei a ferramenta de CI/CD Jenkins para automatizar o processo de teste, build e deploy de Provas de Conceito (PoCs) desenvolvidas em Flutter.",
@@ -53,6 +75,7 @@
                 "role": "Estágio em Desenvolvimento Web Blockchain",
                 "company": "2nd Market",
                 "period": "Ago 2022 - Mai 2024",
+                "technologies": ["Solidity", "Hardhat", "Ethereum", "Polygon", "Web3"],
                 "points": [
                     "Desenvolvi soluções em smart contracts para empresas utilizando bibliotecas profissionais como OpenZeppelin.",
                     "Realizei testes unitários e de integração de smart contracts com frameworks como Hardhat e Truffle para garantir a qualidade do código.",

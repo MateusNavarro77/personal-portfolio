@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useTranslations } from "next-intl";
 import ProjectCard from "./ProjectCard";
 import { githubRootUrl } from "@/constants";
@@ -15,6 +16,12 @@ const PROJECTS_METADATA = [
         github: `${githubRootUrl}/metronome`,
         preview: "https://opengraph.githubassets.com/1/MateusNavarro77/metronome",
         live: "#"
+    },
+    {
+        tech: ["Java", "Spring Boot", "PostgreSQL", "Docker", "DevSecOps"],
+        github: `${githubRootUrl}/projeto-cybersec-taskmanager`,
+        preview: "https://opengraph.githubassets.com/1/MateusNavarro77/projeto-cybersec-taskmanager",
+        live: "#"
     }
 ];
 
@@ -23,21 +30,30 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-24 px-4 max-w-5xl mx-auto w-full">
-            <h2 className="headline-lg mb-12 text-center md:text-left text-foreground">
+            <h2 className="headline-lg mb-12 text-center md:text-left text-on-surface">
                 {t("title")}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                {PROJECTS_METADATA.map((project, index) => (
-                    <div key={index} className={index % 2 === 0 ? "md:col-span-7" : "md:col-span-5"}>
-                        <ProjectCard
-                            index={index}
-                            tech={project.tech}
-                            github={project.github}
-                            preview={project.preview}
-                            live={project.live}
-                        />
-                    </div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                {PROJECTS_METADATA.map((project, index) => {
+                    const isLastOdd = index === PROJECTS_METADATA.length - 1 && PROJECTS_METADATA.length % 2 !== 0;
+                    const colSpanClass = isLastOdd
+                        ? "md:col-span-12 flex flex-col"
+                        : index % 2 === 0
+                        ? "md:col-span-7 flex flex-col"
+                        : "md:col-span-5 flex flex-col";
+
+                    return (
+                        <div key={index} className={colSpanClass}>
+                            <ProjectCard
+                                index={index}
+                                tech={project.tech}
+                                github={project.github}
+                                preview={project.preview}
+                                live={project.live}
+                            />
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );
