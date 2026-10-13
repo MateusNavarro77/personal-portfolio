@@ -20,20 +20,21 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ y: -80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-4 w-full z-50 flex items-center px-4"
         >
-            <div className="max-w-5xl mx-auto px-5 md:px-6 w-full h-16 flex items-center justify-between kinetic-glass rounded-full shadow-ambient border border-outline-variant/15 relative">
+            <div className="max-w-5xl mx-auto px-5 md:px-7 w-full h-16 flex items-center justify-between kinetic-glass rounded-full shadow-ambient border border-[rgba(95,121,153,0.22)] relative">
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex gap-6 lg:gap-8 label-sm">
+                <div className="hidden md:flex items-center gap-6 lg:gap-8 label-sm">
                     {menuItems.map((item) => (
                         <Link
                             key={item.href}
                             // eslint-disable-next-line @typescript-eslint/no-explicit-any
                             href={item.href as any}
-                            className="hover:text-primary transition-colors duration-500"
+                            className="text-on-surface-variant hover:text-primary transition-colors duration-300 tracking-wider font-semibold"
                         >
                             {item.label}
                         </Link>
@@ -46,10 +47,10 @@ const Navbar = () => {
                     {/* Mobile Menu Toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden p-2 text-foreground/80 hover:text-primary transition-colors cursor-pointer rounded-full hover:bg-surface-container-high/50"
+                        className="md:hidden p-2 text-on-surface-variant hover:text-primary transition-colors cursor-pointer rounded-full hover:bg-[rgba(95,121,153,0.15)]"
                         aria-label="Toggle Menu"
                     >
-                        {isOpen ? <X size={24} /> : <Menu size={24} />}
+                        {isOpen ? <X size={22} /> : <Menu size={22} />}
                     </button>
                 </div>
 
@@ -57,10 +58,11 @@ const Navbar = () => {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                            initial={{ opacity: 0, scale: 0.95, y: 10 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 10 }}
-                            className="absolute top-20 left-0 right-0 p-6 rounded-3xl shadow-ambient border border-outline-variant/15 md:hidden flex flex-col gap-6 kinetic-glass"
+                            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                            transition={{ duration: 0.25 }}
+                            className="absolute top-20 left-0 right-0 p-6 rounded-3xl shadow-glass-hover border border-[rgba(95,121,153,0.25)] md:hidden flex flex-col gap-4 kinetic-glass-elevated"
                         >
                             {menuItems.map((item) => (
                                 <Link
@@ -68,7 +70,7 @@ const Navbar = () => {
                                     // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                     href={item.href as any}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors px-2 py-1"
+                                    className="text-base font-semibold text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-xl hover:bg-[rgba(95,121,153,0.1)]"
                                 >
                                     {item.label}
                                 </Link>

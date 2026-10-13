@@ -33,7 +33,7 @@ export default function LanguageSwitcher() {
         <div
             role="group"
             aria-label="Language selection"
-            className={`relative inline-flex items-center gap-1 p-1 rounded-full bg-surface-container/70 hover:bg-surface-container-high/80 border border-outline-variant/25 shadow-sm transition-all duration-300 ${
+            className={`relative inline-flex items-center gap-1 p-1 rounded-full bg-[rgba(13,24,41,0.7)] hover:bg-[rgba(18,30,49,0.85)] border border-[rgba(95,121,153,0.25)] shadow-sm transition-all duration-300 ${
                 isPending ? "opacity-70 pointer-events-none" : ""
             }`}
         >
@@ -45,7 +45,7 @@ export default function LanguageSwitcher() {
                 whileHover={{ rotate: 180, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="flex items-center justify-center w-7 h-7 rounded-full text-foreground/70 hover:text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 disabled:opacity-50"
+                className="flex items-center justify-center w-7 h-7 rounded-full text-on-surface-variant hover:text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 disabled:opacity-50"
                 title="Toggle language / Mudar idioma"
                 aria-label="Toggle language"
             >
@@ -68,13 +68,13 @@ export default function LanguageSwitcher() {
                             className={`relative z-10 px-3 py-1.5 label-sm rounded-full transition-colors duration-300 cursor-pointer select-none ${
                                 isActive
                                     ? "text-white font-bold"
-                                    : "text-foreground/60 hover:text-foreground"
+                                    : "text-on-surface-variant hover:text-on-surface"
                             }`}
                         >
                             {isActive && (
                                 <motion.span
                                     layoutId="activeLocalePill"
-                                    className="absolute inset-0 bg-gradient-to-r from-primary to-primary-container rounded-full shadow-sm -z-10"
+                                    className="absolute inset-0 bg-gradient-to-r from-[#157BC8] to-[#5F7999] rounded-full shadow-[0_0_12px_rgba(21,123,200,0.4)] -z-10"
                                     transition={{
                                         type: "spring",
                                         stiffness: 400,
@@ -90,4 +90,3 @@ export default function LanguageSwitcher() {
         </div>
     );
 }
-

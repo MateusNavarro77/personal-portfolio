@@ -9,18 +9,18 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const baseClass =
-    "inline-flex items-center justify-center gap-2 rounded-full font-medium cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center gap-2 rounded-2xl font-bold cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed select-none";
 
 const variants: Record<ButtonVariant, string> = {
     primary:
-        "bg-primary text-white shadow-ambient hover:shadow-interactive hover:-translate-y-0.5",
+        "bg-gradient-to-r from-[#157BC8] to-[#5F7999] text-white shadow-button-downward hover:shadow-button-glow hover:-translate-y-0.5 active:translate-y-0",
     secondary:
-        "bg-surface-container-high text-foreground border border-outline-variant/15 hover:-translate-y-0.5",
+        "bg-[rgba(95,121,153,0.08)] text-[#F8F9FA] border border-[rgba(95,121,153,0.3)] hover:bg-[rgba(21,123,200,0.16)] hover:border-primary/50 hover:text-white hover:-translate-y-0.5 active:translate-y-0",
 };
 
 const sizes: Record<ButtonSize, string> = {
     sm: "h-10 px-5 text-sm",
-    md: "h-12 px-8 text-sm",
+    md: "h-12 px-7 text-sm",
 };
 
 export function buttonVariants({

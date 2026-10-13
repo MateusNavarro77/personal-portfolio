@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl";
 import Chip from "./Chip";
 import { buttonVariants } from "./Button";
 import Image from "next/image";
+import SimpleIcon from "./SimpleIcon";
+import { getTechIcon } from "@/utils/techIcons";
 
 interface ProjectCardProps {
     index: number;
@@ -24,52 +26,64 @@ const ProjectCard = ({ index, tech, github, preview, live }: ProjectCardProps) =
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
-            className="group rounded-xl overflow-hidden bg-surface-container-lowest shadow-ambient hover:shadow-interactive hover:-translate-y-1 transition-[box-shadow,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+            transition={{ delay: index * 0.1, duration: 0.6 }}
+            className="group rounded-2xl overflow-hidden kinetic-glass shadow-ambient hover:shadow-glass-hover hover:-translate-y-1.5 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] flex flex-col h-full"
         >
-            <div className="aspect-video bg-surface-container-low overflow-hidden relative">
+            <div className="aspect-video bg-surface-container-low overflow-hidden relative border-b border-[rgba(95,121,153,0.15)]">
                 <Image
                     src={preview}
                     alt={`${t(`items.${index}.title`)} preview`}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover filter grayscale group-hover:grayscale-0 transition-[filter] duration-500"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-secondary/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(16,20,24,0.6)] via-transparent to-transparent pointer-events-none" />
             </div>
-            <div className="p-6">
-                <h3 className="title-md mb-2 group-hover:text-primary transition-colors duration-500">
-                    {t(`items.${index}.title`)}
-                </h3>
-                <p className="text-foreground/75 mb-4">
-                    {t(`items.${index}.description`)}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                    {tech.map((item) => (
-                        <Chip key={item}>
-                            {item}
-                        </Chip>
-                    ))}
+            <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
+                <div>
+                    <h3 className="title-md mb-2 group-hover:text-primary transition-colors duration-300 text-on-surface">
+                        {t(`items.${index}.title`)}
+                    </h3>
+                    <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed mb-6">
+                        {t(`items.${index}.description`)}
+                    </p>
                 </div>
-                <div className="flex gap-4">
-                    <a
-                        href={github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={buttonVariants({ variant: "secondary", size: "sm", className: "px-4" })}
-                    >
-                        <Github size={16} /> {t("code")}
-                    </a>
-                    {live !== "#" && (
+
+                <div>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                        {tech.map((item) => {
+                            const icon = getTechIcon(item);
+                            return (
+                                <Chip
+                                    key={item}
+                                    icon={icon ? <SimpleIcon icon={icon} size={13} /> : undefined}
+                                    dot={!icon}
+                                >
+                                    {item}
+                                </Chip>
+                            );
+                        })}
+                    </div>
+                    <div className="flex flex-wrap gap-3">
                         <a
-                            href={live}
+                            href={github}
                             target="_blank"
                             rel="noreferrer"
-                            className={buttonVariants({ variant: "secondary", size: "sm", className: "px-4" })}
+                            className={buttonVariants({ variant: "secondary", size: "sm", className: "px-4 gap-2" })}
                         >
-                            <ExternalLink size={16} /> {t("live")}
+                            <Github size={16} /> {t("code")}
                         </a>
-                    )}
+                        {live !== "#" && (
+                            <a
+                                href={live}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={buttonVariants({ variant: "secondary", size: "sm", className: "px-4 gap-2" })}
+                            >
+                                <ExternalLink size={16} /> {t("live")}
+                            </a>
+                        )}
+                    </div>
                 </div>
             </div>
         </motion.div>
