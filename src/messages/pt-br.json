@@ -48,6 +48,7 @@
                 "role": "Bolsista de Desenvolvimento de Software (Flutter)",
                 "company": "Banco do Nordeste",
                 "period": "Nov 2024 - presente",
+                "technologies": ["Flutter", "Dart", "Jenkins", "Figma", "Docusaurus"],
                 "points": [
                     "Implementei componentes de interface do usuário projetados no Figma para a construção de uma biblioteca de componentes reutilizáveis em Flutter.",
                     "Utilizei a ferramenta de CI/CD Jenkins para automatizar o processo de teste, build e deploy de Provas de Conceito (PoCs) desenvolvidas em Flutter.",
@@ -58,6 +59,7 @@
                 "role": "Estágio em Desenvolvimento Web Blockchain",
                 "company": "2nd Market",
                 "period": "Ago 2022 - Mai 2024",
+                "technologies": ["Solidity", "Hardhat", "Ethereum", "Polygon", "Web3"],
                 "points": [
                     "Desenvolvi soluções em smart contracts para empresas utilizando bibliotecas profissionais como OpenZeppelin.",
                     "Realizei testes unitários e de integração de smart contracts com frameworks como Hardhat e Truffle para garantir a qualidade do código.",

@@ -48,6 +48,7 @@
                 "role": "Mobile Software Development Intern (Flutter)",
                 "company": "Banco do Nordeste",
                 "period": "Nov 2024 - Present",
+                "technologies": ["Flutter", "Dart", "Jenkins", "Figma", "Docusaurus"],
                 "points": [
                     "Implemented UI components designed in Figma to build a reusable Flutter component library.",
                     "Utilized Jenkins CI/CD tools to automate the testing, building, and deployment of Flutter Proof of Concepts (PoCs).",
@@ -58,6 +59,7 @@
                 "role": "Blockchain Web Developer Intern",
                 "company": "2nd Market",
                 "period": "Aug 2022 - May 2024",
+                "technologies": ["Solidity", "Hardhat", "Ethereum", "Polygon", "Web3"],
                 "points": [
                     "Developed smart contract solutions for companies using professional libraries such as OpenZeppelin.",
                     "Performed unit and integration testing for smart contracts using Hardhat and Truffle frameworks to ensure code quality.",
