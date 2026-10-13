@@ -2,6 +2,7 @@
     "Navbar": {
         "about": "Sobre",
         "projects": "Projetos",
+        "openSource": "Open Source",
         "skills": "Habilidades",
         "experience": "Experiência",
         "contact": "Contato",
@@ -35,6 +36,21 @@
             {
                 "title": "Cybersec Task Manager",
                 "description": "Projeto desenvolvido para a faculdade (Engenharia da Computação) com foco principal na construção de uma esteira DevSecOps completa, desde o desenvolvimento seguro até a produção na VPS. A API REST em Spring Boot aplica autenticação JWT, isolamento de dados por usuário, testes unitários e de integração com Testcontainers, análise estática (SAST) com Sonar e OWASP Dependency-Check, testes dinâmicos (DAST) com OWASP ZAP e observabilidade com Prometheus e Grafana."
+            }
+        ]
+    },
+    "OpenSource": {
+        "title": "Open Source",
+        "viewPr": "Ver Pull Request",
+        "merged": "Merged",
+        "items": [
+            {
+                "repository": "felangel/bloc",
+                "prNumber": 4821,
+                "prUrl": "https://github.com/felangel/bloc/pull/4821",
+                "title": "docs: pt-br translations for testing, migration, and FAQs",
+                "description": "Contribuição para o repositório oficial do pacote Bloc (o ecossistema de gerência de estado mais utilizado no Flutter), traduzindo guias de testes, documentação de migração e FAQs para Português do Brasil, fortalecendo a comunidade e facilitando o aprendizado de arquitetura limpa em Flutter.",
+                "technologies": ["Flutter", "Dart", "BLoC", "Documentação"]
             }
         ]
     },

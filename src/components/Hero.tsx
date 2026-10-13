@@ -25,14 +25,7 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    {/* Live Availability Status Indicator */}
-                    <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[rgba(21,123,200,0.12)] border border-primary/30 text-primary text-xs font-semibold mb-6 shadow-[0_0_15px_rgba(21,123,200,0.2)]">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
-                        <span>{t("status")}</span>
-                    </div>
+
 
                     <h1 className="display-hero mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#54C5F8] to-secondary">
                         {t("title")}

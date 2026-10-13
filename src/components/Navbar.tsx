@@ -14,6 +14,7 @@ const Navbar = () => {
     const menuItems = [
         { href: "/#about", label: t("about") },
         { href: "/#projects", label: t("projects") },
+        { href: "/#opensource", label: t("openSource") },
         { href: "/#skills", label: t("skills") },
         { href: "/#experience", label: t("experience") },
         { href: "/#contact", label: t("contact") },
@@ -28,11 +29,11 @@ const Navbar = () => {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 pointer-events-none"
         >
-            <div className="w-full max-w-4xl flex flex-col items-center pointer-events-auto">
+            <div className="w-full max-w-5xl xl:max-w-6xl flex flex-col items-center pointer-events-auto">
                 {/* Dynamic Island Notch Bar */}
                 <nav
                     aria-label="Main Navigation"
-                    className="w-full sm:w-auto min-w-0 max-w-full flex items-center justify-between gap-3 sm:gap-6 md:gap-8 px-4 sm:px-6 py-2.5 bg-[#0b0e14] border-b border-x sm:border-x-0 border-white/10 rounded-b-2xl sm:rounded-b-[24px] shadow-[0_12px_32px_rgba(0,0,0,0.65)] relative z-20"
+                    className="w-full sm:w-auto min-w-0 max-w-full flex items-center justify-between gap-3 sm:gap-5 md:gap-6 lg:gap-8 px-4 sm:px-6 py-2.5 bg-[#0b0e14] border-b border-x sm:border-x-0 border-white/10 rounded-b-2xl sm:rounded-b-[24px] shadow-[0_12px_32px_rgba(0,0,0,0.65)] relative z-20"
                 >
                     {/* Top-left concave curve ("curva superior") */}
                     <svg
@@ -69,13 +70,13 @@ const Navbar = () => {
                     {/* Left: Text Branding */}
                     <Link
                         href="/#"
-                        className="text-sm md:text-base font-bold tracking-tight text-white hover:text-primary transition-colors whitespace-nowrap select-none"
+                        className="text-sm md:text-base font-bold tracking-tight text-white hover:text-primary transition-colors whitespace-nowrap select-none shrink-0"
                     >
                         Mateus Navarro
                     </Link>
 
                     {/* Center: Desktop Navigation Links */}
-                    <div className="hidden md:flex items-center gap-5 lg:gap-7">
+                    <div className="hidden md:flex items-center gap-3.5 md:gap-4 lg:gap-6 shrink-0">
                         {menuItems.map((item) => (
                             <Link
                                 key={item.href}
@@ -89,7 +90,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Right: Actions (Language Switcher + Download CV CTA) */}
-                    <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                         <LanguageSwitcher compact />
 
                         {/* Desktop Pill Download CTA */}
@@ -97,7 +98,7 @@ const Navbar = () => {
                             href={cvUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white text-neutral-900 hover:bg-neutral-200 font-semibold text-xs transition-all duration-200 shadow-sm hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
+                            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white text-neutral-900 hover:bg-neutral-200 font-semibold text-xs transition-all duration-200 shadow-sm hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap shrink-0"
                         >
                             <Download size={13} className="stroke-[2.5]" />
                             <span>{t("downloadCv")}</span>
