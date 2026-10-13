@@ -4,7 +4,8 @@
         "projects": "Projetos",
         "skills": "Habilidades",
         "experience": "Experiência",
-        "contact": "Contato"
+        "contact": "Contato",
+        "downloadCv": "Baixar CV"
     },
     "Hero": {
         "status": "Disponível para estágios",

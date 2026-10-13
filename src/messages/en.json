@@ -4,7 +4,8 @@
         "projects": "Projects",
         "skills": "Skills",
         "experience": "Experience",
-        "contact": "Contact"
+        "contact": "Contact",
+        "downloadCv": "Download CV"
     },
     "Hero": {
         "status": "Available for internships",
