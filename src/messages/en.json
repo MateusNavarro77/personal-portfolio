@@ -45,6 +45,14 @@
         "merged": "Merged",
         "items": [
             {
+                "repository": "immich-app/immich",
+                "prNumber": 32503,
+                "prUrl": "https://github.com/immich-app/immich/pull/32503",
+                "title": "fix(mobile): border radius on list tiles in library page",
+                "description": "Contributed a mobile UI fix to Immich by correcting the splash border radius behavior on Library page list tiles (Folders, Locked Folder, and Partners), improving visual consistency during interaction.",
+                "technologies": ["Flutter", "Dart", "Mobile", "UI"]
+            },
+            {
                 "repository": "felangel/bloc",
                 "prNumber": 4821,
                 "prUrl": "https://github.com/felangel/bloc/pull/4821",
