@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Metronome</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #090d16;
+      color: #f0f6fc;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 20px 24px;
+      overflow: hidden;
+    }
+    .header { font-size: 15px; font-weight: 700; color: #94a3b8; letter-spacing: 0.1em; text-transform: uppercase; }
+    .bpm-display { text-align: center; margin: auto 0; }
+    .bpm-number { font-size: 72px; font-weight: 800; color: #38bdf8; line-height: 1; }
+    .bpm-label { font-size: 14px; color: #64748b; font-weight: 600; margin-top: 6px; }
+    
+    .beat-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid rgba(56, 189, 248, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.08s ease-out, border-color 0.08s ease-out, box-shadow 0.08s ease-out;
+      margin: 20px 0;
+    }
+    .beat-circle.pulse {
+      transform: scale(1.15);
+      border-color: #38bdf8;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+    }
+    .beat-inner {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #38bdf8;
+    }
+
+    .controls {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .btn-step {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #1e293b;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-step:active { transform: scale(0.9); }
+    .btn-play {
+      padding: 14px 48px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      border-radius: 999px;
+      border: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+    }
+    .btn-play:active { transform: scale(0.96); }
+  </style>
+</head>
+<body>
+  <div class="header">Metronome</div>
+
+  <div class="bpm-display">
+    <div class="bpm-number" id="bpm">120</div>
+    <div class="bpm-label">BEATS PER MINUTE</div>
+    
+    <div style="display: flex; justify-content: center;">
+      <div class="beat-circle" id="circle">
+        <div class="beat-inner"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-step" onclick="changeBpm(-5)">−</button>
+    <button class="btn-play" id="playBtn" onclick="togglePlay()">START</button>
+    <button class="btn-step" onclick="changeBpm(5)">+</button>
+  </div>
+
+  <script>
+    let bpm = 120;
+    let isPlaying = false;
+    let timer = null;
+    const circle = document.getElementById('circle');
+    const bpmEl = document.getElementById('bpm');
+    const playBtn = document.getElementById('playBtn');
+
+    function changeBpm(delta) {
+      bpm = Math.max(40, Math.min(240, bpm + delta));
+      bpmEl.innerText = bpm;
+      if (isPlaying) {
+        clearInterval(timer);
+        startTimer();
+      }
+    }
+
+    function beat() {
+      circle.classList.add('pulse');
+      setTimeout(() => circle.classList.remove('pulse'), 90);
+    }
+
+    function startTimer() {
+      timer = setInterval(beat, (60 / bpm) * 1000);
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        playBtn.innerText = 'STOP';
+        playBtn.style.background = '#e11d48';
+        beat();
+        startTimer();
+      } else {
+        playBtn.innerText = 'START';
+        playBtn.style.background = 'linear-gradient(135deg, #0284c7, #38bdf8)';
+        clearInterval(timer);
+      }
+    }
+  </script>
+</body>
+</html>

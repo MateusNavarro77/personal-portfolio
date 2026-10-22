@@ -2,6 +2,7 @@
     "Navbar": {
         "about": "Sobre",
         "projects": "Projetos",
+        "showcase": "Showcase",
         "openSource": "Open Source",
         "skills": "Habilidades",
         "experience": "Experiência",
@@ -36,6 +37,40 @@
             {
                 "title": "Cybersec Task Manager",
                 "description": "Projeto desenvolvido para a faculdade (Engenharia da Computação) com foco principal na construção de uma esteira DevSecOps completa, desde o desenvolvimento seguro até a produção na VPS. A API REST em Spring Boot aplica autenticação JWT, isolamento de dados por usuário, testes unitários e de integração com Testcontainers, análise estática (SAST) com Sonar e OWASP Dependency-Check, testes dinâmicos (DAST) com OWASP ZAP e observabilidade com Prometheus e Grafana."
+            }
+        ]
+    },
+    "MobileShowcase": {
+        "tag": "Experiência Interativa",
+        "title": "Showcase Mobile Interativo",
+        "subtitle": "Aplicações móveis interativas e protótipos de produção desenvolvidos em Flutter.",
+        "interactHint": "Clique ou toque na tela para interagir com o app",
+        "screenshotHint": "Visualizando captura de tela do app",
+        "reloadApp": "Recarregar app",
+        "openNewTab": "Abrir em Nova Aba",
+        "viewScreenshot": "Ver Captura",
+        "viewLiveDemo": "Abrir Demo ao Vivo",
+        "viewSource": "Código Fonte",
+        "activeDevice": "Dispositivo em foco",
+        "deviceCount": "{current} de {total}",
+        "items": [
+            {
+                "title": "Kriptum Web3 Wallet",
+                "category": "Fintech & Blockchain",
+                "description": "Carteira digital (Hot Wallet) desenvolvida em Flutter e Web3dart. Suporta redes EVM, derivação de chaves e transferências de tokens.",
+                "features": ["Integração com Web3dart EVM", "Derivação de chaves HD Wallet", "Simulação de saldo em tempo real"]
+            },
+            {
+                "title": "Metronome Pro",
+                "category": "Áudio & Produtividade",
+                "description": "Metrônomo minimalista com pulso visual dinâmico de andamento e áudio de alta precisão sem distrações.",
+                "features": ["Sincronização sonora de precisão", "Pulso visual de andamento dinâmico", "Interface limpa e sem anúncios"]
+            },
+            {
+                "title": "Cybersec Task Hub",
+                "category": "DevSecOps & Gestão",
+                "description": "Painel mobile para acompanhamento de esteiras DevSecOps, métricas SAST/DAST e conformidade de segurança.",
+                "features": ["Métricas do SonarQube e ZAP", "Conformidade de pipeline em tempo real", "Armazenamento seguro de tokens JWT"]
             }
         ]
     },

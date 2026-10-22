@@ -14,6 +14,7 @@ const Navbar = () => {
     const menuItems = [
         { href: "/#about", label: t("about") },
         { href: "/#projects", label: t("projects") },
+        { href: "/#showcase", label: t("showcase") },
         { href: "/#opensource", label: t("openSource") },
         { href: "/#skills", label: t("skills") },
         { href: "/#experience", label: t("experience") },

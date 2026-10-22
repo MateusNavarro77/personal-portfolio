@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "opengraph.githubassets.com"
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com"
       }
     ]
   }

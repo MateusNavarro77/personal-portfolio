@@ -2,6 +2,7 @@
     "Navbar": {
         "about": "About",
         "projects": "Projects",
+        "showcase": "Showcase",
         "openSource": "Open Source",
         "skills": "Skills",
         "experience": "Experience",
@@ -36,6 +37,40 @@
             {
                 "title": "Cybersec Task Manager",
                 "description": "Academic project developed for Computer Engineering with a primary focus on building an end-to-end DevSecOps pipeline, from secure development to VPS production deployment. The Spring Boot REST API implements JWT authentication, per-user data isolation, unit and integration tests with Testcontainers, static analysis (SAST) with Sonar and OWASP Dependency-Check, dynamic testing (DAST) with OWASP ZAP, and observability with Prometheus and Grafana."
+            }
+        ]
+    },
+    "MobileShowcase": {
+        "tag": "Interactive Experience",
+        "title": "Live Mobile Showcase",
+        "subtitle": "Interactive mobile apps and production previews built with Flutter.",
+        "interactHint": "Click inside to interact with the live app",
+        "screenshotHint": "Previewing app screenshot",
+        "reloadApp": "Reload app",
+        "openNewTab": "Open in New Tab",
+        "viewScreenshot": "View Screenshot",
+        "viewLiveDemo": "Open Live Demo",
+        "viewSource": "Source Code",
+        "activeDevice": "Device in focus",
+        "deviceCount": "{current} of {total}",
+        "items": [
+            {
+                "title": "Kriptum Web3 Wallet",
+                "category": "Fintech & Blockchain",
+                "description": "Non-custodial mobile wallet built with Flutter and Web3dart. Supports EVM networks, HD key generation, and token transfers.",
+                "features": ["Web3dart EVM integration", "HD Wallet key generation", "Live asset balance simulation"]
+            },
+            {
+                "title": "Metronome Pro",
+                "category": "Audio & Productivity",
+                "description": "Clean, distraction-free precision metronome with dynamic BPM visual pulse and low-latency audio playback.",
+                "features": ["Sub-millisecond audio sync", "Dynamic visual tempo pulse", "Zero tracking or ads"]
+            },
+            {
+                "title": "Cybersec Task Hub",
+                "category": "DevSecOps & Management",
+                "description": "Mobile dashboard for tracking DevSecOps pipelines, automated SAST/DAST metrics, and security checklists.",
+                "features": ["SonarQube & ZAP metrics", "Real-time pipeline compliance", "Secure JWT token storage"]
             }
         ]
     },
