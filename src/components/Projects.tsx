@@ -22,6 +22,12 @@ const PROJECTS_METADATA = [
         github: `${githubRootUrl}/projeto-cybersec-taskmanager`,
         preview: "https://opengraph.githubassets.com/1/MateusNavarro77/projeto-cybersec-taskmanager",
         live: "#"
+    },
+    {
+        tech: ["Bun", "TypeScript", "React", "Ethereum", "Viem", "OpenTUI"],
+        github: `${githubRootUrl}/ethereum-wallet-cli`,
+        preview: "https://raw.githubusercontent.com/MateusNavarro77/ethereum-wallet-cli/refs/heads/main/screenshots/thumbnail.png",
+        live: "#"
     }
 ];
 
