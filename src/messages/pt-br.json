@@ -37,6 +37,10 @@
             {
                 "title": "Cybersec Task Manager",
                 "description": "Projeto desenvolvido para a faculdade (Engenharia da Computação) com foco principal na construção de uma esteira DevSecOps completa, desde o desenvolvimento seguro até a produção na VPS. A API REST em Spring Boot aplica autenticação JWT, isolamento de dados por usuário, testes unitários e de integração com Testcontainers, análise estática (SAST) com Sonar e OWASP Dependency-Check, testes dinâmicos (DAST) com OWASP ZAP e observabilidade com Prometheus e Grafana."
+            },
+            {
+                "title": "TermiWallet",
+                "description": "Uma carteira Ethereum não custodial que funciona inteiramente no terminal como uma interface de usuário textual interativa. Oferece contas HD, armazenamento local de uma carteira criptografada, troca de redes EVM, acompanhamento de portfólio, tokens ERC-20 e envio de transações."
             }
         ]
     },

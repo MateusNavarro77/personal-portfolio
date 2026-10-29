@@ -37,6 +37,10 @@
             {
                 "title": "Cybersec Task Manager",
                 "description": "Academic project developed for Computer Engineering with a primary focus on building an end-to-end DevSecOps pipeline, from secure development to VPS production deployment. The Spring Boot REST API implements JWT authentication, per-user data isolation, unit and integration tests with Testcontainers, static analysis (SAST) with Sonar and OWASP Dependency-Check, dynamic testing (DAST) with OWASP ZAP, and observability with Prometheus and Grafana."
+            },
+            {
+                "title": "TermiWallet",
+                "description": "A non-custodial Ethereum wallet that runs entirely in the terminal as an interactive Text User Interface. It supports HD accounts, local encrypted vault storage, EVM network switching, portfolio tracking, ERC-20 tokens, and transaction dispatch."
             }
         ]
     },
