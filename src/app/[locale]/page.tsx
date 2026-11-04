@@ -17,9 +17,9 @@ export default function Home() {
       <div className="w-full bg-background">
         <Projects />
       </div>
-      <div className="w-full bg-surface-container-low">
+     {/*  <div className="w-full bg-surface-container-low">
         <MobileShowcase />
-      </div>
+      </div> */}
       <div className="w-full bg-background">
         <OpenSource />
       </div>
