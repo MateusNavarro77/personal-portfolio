@@ -14,7 +14,13 @@
         "title": "Mateus Navarro",
         "description": "Desenvolvedor de Software Mobile",
         "viewProjects": "Ver Projetos",
-        "downloadCv": "Baixar CV"
+        "viewExperience": "Experiência Profissional",
+        "downloadCv": "Baixar CV",
+        "carousel": {
+            "regionLabel": "Carrossel de tecnologias",
+            "nextHint": "Clique ou arraste para trocar",
+            "goToSlide": "Mostrar {tech}"
+        }
     },
     "About": {
         "title": "Sobre Mim",

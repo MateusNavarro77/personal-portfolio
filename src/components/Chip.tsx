@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 type ChipVariant = "default" | "primary" | "status";
 
@@ -10,15 +11,12 @@ type ChipProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 const baseClass =
-    "inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 label-sm transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] select-none";
+    "inline-flex items-center gap-1.5 rounded-[100px] px-3 py-1 border-[2.5px] border-ink text-xs font-extrabold tracking-wide text-ink shadow-cartoon-xs select-none";
 
 const variants: Record<ChipVariant, string> = {
-    default:
-        "bg-[rgba(13,24,41,0.7)] text-on-surface border border-[rgba(95,121,153,0.25)] hover:border-primary/50 hover:bg-[rgba(21,123,200,0.1)]",
-    primary:
-        "bg-[rgba(2,43,95,0.55)] text-primary border border-primary/30 hover:border-primary hover:bg-[rgba(2,43,95,0.8)]",
-    status:
-        "bg-[rgba(21,123,200,0.12)] text-primary border border-primary/30 shadow-[0_0_12px_rgba(21,123,200,0.2)]",
+    default: "bg-secondary",
+    primary: "bg-accent",
+    status: "bg-accent",
 };
 
 export default function Chip({
@@ -31,12 +29,17 @@ export default function Chip({
     ...props
 }: ChipProps) {
     return (
-        <span className={[baseClass, variants[variant], className].join(" ")} {...props}>
+        <span className={cn(baseClass, variants[variant], className)} {...props}>
             {icon ? (
-                <span className="shrink-0 flex items-center justify-center">{icon}</span>
+                <span className="shrink-0 flex items-center justify-center text-ink">
+                    {icon}
+                </span>
             ) : dot ? (
                 <span
-                    className={`w-1.5 h-1.5 rounded-full shrink-0 animate-pulse ${!dotColor ? "bg-primary" : ""}`}
+                    className={cn(
+                        "w-2 h-2 rounded-full shrink-0 border border-ink",
+                        !dotColor && "bg-accent"
+                    )}
                     style={dotColor ? { backgroundColor: dotColor } : undefined}
                 />
             ) : null}
