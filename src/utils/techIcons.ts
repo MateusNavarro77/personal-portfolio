@@ -62,41 +62,42 @@ export const TECH_ICONS: Record<string, SimpleIconType> = {
     "material design": siMaterialdesign,
 };
 
+/* High-contrast colors tuned for light Cartoon Blueprint surfaces (#d1e4ff / #aec9ec) */
 export const TECH_COLORS: Record<string, string> = {
-    flutter: "#47C5FB",
-    dart: "#0175C2",
-    javascript: "#F7DF1E",
-    typescript: "#3178C6",
-    java: "#ED8B00",
-    react: "#61DAFB",
-    "spring boot": "#6DB33F",
-    springboot: "#6DB33F",
-    spring: "#6DB33F",
-    postgresql: "#4169E1",
-    postgres: "#4169E1",
-    docker: "#2496ED",
-    git: "#F05032",
-    github: "#FFFFFF",
-    gitlab: "#FC6D26",
-    jenkins: "#D24939",
-    solidity: "#627EEA",
-    ethereum: "#627EEA",
-    hardhat: "#FFF100",
-    sqlite: "#3CA5E8",
-    web3: "#F16822",
-    web3dart: "#F16822",
-    material: "#7986CB",
-    "material design": "#7986CB",
-    "express js": "#FFFFFF",
-    express: "#FFFFFF",
-    devsecops: "#00A3E0",
-    owasp: "#00A3E0",
-    flyway: "#CC0200",
-    prometheus: "#E6522C",
-    grafana: "#F46800",
-    junit: "#25A162",
-    junit5: "#25A162",
-    bloc: "#53C1DE",
+    flutter: "#02569B",
+    dart: "#01579B",
+    javascript: "#9A6B00",
+    typescript: "#1B4F91",
+    java: "#B04A00",
+    react: "#00698F",
+    "spring boot": "#3D7317",
+    springboot: "#3D7317",
+    spring: "#3D7317",
+    postgresql: "#26449C",
+    postgres: "#26449C",
+    docker: "#0D63A5",
+    git: "#B33318",
+    github: "#0B0E13",
+    gitlab: "#B34210",
+    jenkins: "#9E2A1E",
+    solidity: "#33469A",
+    ethereum: "#33469A",
+    hardhat: "#7A5B00",
+    sqlite: "#0F5B94",
+    web3: "#B0450C",
+    web3dart: "#B0450C",
+    material: "#3F4B9B",
+    "material design": "#3F4B9B",
+    "express js": "#0B0E13",
+    express: "#0B0E13",
+    devsecops: "#00618A",
+    owasp: "#00618A",
+    flyway: "#9C0200",
+    prometheus: "#B03416",
+    grafana: "#AD4400",
+    junit: "#166E41",
+    junit5: "#166E41",
+    bloc: "#006680",
 };
 
 export function getTechIcon(name: string): SimpleIconType | null {
@@ -107,10 +108,5 @@ export function getTechIcon(name: string): SimpleIconType | null {
 export function getTechColor(name: string): string | null {
     const key = name.trim().toLowerCase();
     if (TECH_COLORS[key]) return TECH_COLORS[key];
-    const icon = TECH_ICONS[key];
-    if (icon && icon.hex && icon.hex !== "000000" && icon.hex !== "0A0A0A" && icon.hex !== "181717") {
-        return `#${icon.hex}`;
-    }
-    return null;
+    return "#0b0e13";
 }
-

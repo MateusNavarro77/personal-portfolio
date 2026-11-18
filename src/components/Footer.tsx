@@ -5,10 +5,15 @@ const Footer = () => {
     const t = useTranslations("Footer");
 
     return (
-        <footer className="w-full py-12 bg-surface-container-lowest border-t border-[rgba(95,121,153,0.15)] text-center text-sm text-on-surface-variant/75">
+        <footer className="w-full py-10 bg-surface border-t-[3.5px] border-ink text-center text-sm text-ink">
             <div className="max-w-5xl mx-auto px-4">
-                <p>© {new Date().getFullYear()} <span className="text-on-surface font-semibold">Mateus Navarro</span>. {t("rights")}</p>
-                <p className="mt-2 text-xs text-on-surface-variant/60">Built with Next.js, Flutter Sky Tech Design System and Framer Motion.</p>
+                <p className="font-bold">
+                    © {new Date().getFullYear()}{" "}
+                    <span className="font-black">Mateus Navarro</span>. {t("rights")}
+                </p>
+                <p className="mt-2 text-xs font-bold">
+                    Built with Next.js, Cartoon Blueprint Design System and Framer Motion.
+                </p>
             </div>
         </footer>
     );

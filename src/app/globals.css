@@ -1,266 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  /* Color Palette - Flutter Sky Tech Portfolio (Dark mode first) */
-  --background: #101418;
-  --on-background: #e0e2e9;
-
-  --surface: #101418;
-  --surface-dim: #101418;
-  --surface-bright: #36393f;
-  --surface-container-lowest: #0b0e13;
-  --surface-container-low: #181c21;
-  --surface-container: #1c2025;
-  --surface-container-high: #272a2f;
-  --surface-container-highest: #32353a;
-  --on-surface: #e0e2e9;
-  --on-surface-variant: #c0c7d3;
-  --inverse-surface: #e0e2e9;
-  --inverse-on-surface: #2d3136;
-
-  --outline: #8a919c;
-  --outline-variant: #404751;
-  --surface-tint: #9dcaff;
-
-  /* Primary Electric Cyan */
-  --primary: #9dcaff;
-  --on-primary: #003258;
-  --primary-container: #3f95e4;
-  --on-primary-container: #002b4d;
-  --inverse-primary: #0061a3;
-
-  /* Secondary Slate Blue */
+  /* Cartoon Blueprint Tokens (Light Mode per DESIGN.md) */
+  --ink: #0b0e13;
+  --paper: #e0e2e9;
+  --paper-alt: #d6dce6;
+  --surface: #d1e4ff;
+  --accent: #60a8ed;
+  --accent-soft: #9dcaff;
   --secondary: #aec9ec;
-  --on-secondary: #16324e;
-  --secondary-container: #2e4866;
-  --on-secondary-container: #9db7da;
+  --pop: #d77826;
+  --danger: #ffb4ab;
+  --disabled: #c0c7d3;
 
-  /* Tertiary Amber Accent */
-  --tertiary: #ffb783;
-  --on-tertiary: #4f2500;
-  --tertiary-container: #d77826;
-  --on-tertiary-container: #452000;
+  /* Semantic aliases */
+  --background: var(--paper);
+  --on-background: var(--ink);
+  --on-surface: var(--ink);
+  --primary: var(--accent);
+  --on-primary: var(--ink);
 
-  --error: #ffb4ab;
-  --on-error: #690005;
-  --error-container: #93000a;
-  --on-error-container: #ffdad6;
-
-  --primary-fixed: #d1e4ff;
-  --primary-fixed-dim: #9dcaff;
-  --on-primary-fixed: #001d36;
-  --on-primary-fixed-variant: #00497c;
-
-  --secondary-fixed: #d1e4ff;
-  --secondary-fixed-dim: #aec9ec;
-  --on-secondary-fixed: #001d36;
-  --on-secondary-fixed-variant: #2e4866;
-
-  --tertiary-fixed: #ffdcc5;
-  --tertiary-fixed-dim: #ffb783;
-  --on-tertiary-fixed: #301400;
-  --on-tertiary-fixed-variant: #703700;
-
-  --surface-variant: #32353a;
-
-  /* Brand Core Tokens */
-  --brand-electric-cyan: #157bc8;
-  --brand-slate-blue: #5f7999;
-  --brand-amber: #b05a00;
-
-  /* Typography Fonts */
+  /* Typography */
+  --font-fredoka: var(--font-fredoka);
   --font-plus-jakarta: var(--font-plus-jakarta);
-  --font-inter: var(--font-inter);
 
-  /* Roundedness Radii */
-  --radius-sm: 0.5rem;
-  --radius-default: 1rem;
-  --radius-md: 1.5rem;
-  --radius-lg: 2rem;
-  --radius-xl: 3rem;
-  --radius-full: 9999px;
+  /* Borders & Radii */
+  --border-thick: 3.5px;
+  --border-thin: 2.5px;
+  --radius-pill: 100px;
+  --radius-card: 28px;
+  --radius-surface: 24px;
 
-  /* Spacing */
-  --spacing-container-max: 1240px;
-  --spacing-gutter: 1.5rem;
-  --spacing-gutter-mobile: 1rem;
-  --spacing-margin-desktop: 3rem;
-  --spacing-margin-mobile: 1.25rem;
-
-  /* Shadows - Atmospheric Ambient Tech */
-  --shadow-ambient: 0 12px 32px rgba(2, 43, 95, 0.35);
-  --shadow-glass-hover: 0 12px 32px rgba(2, 43, 95, 0.45), 0 0 24px rgba(95, 121, 153, 0.22);
-  --shadow-button-downward: 0 4px 20px rgba(21, 123, 200, 0.5);
-  --shadow-button-glow: 0 0 18px rgba(95, 121, 153, 0.45);
+  /* Hard Oblique Shadows (Zero Blur, Solid Ink) */
+  --shadow-lg: 7px 8px 0px #0b0e13;
+  --shadow-md: 5px 6px 0px #0b0e13;
+  --shadow-sm: 3px 4px 0px #0b0e13;
+  --shadow-xs: 2px 3px 0px #0b0e13;
 }
 
 @theme inline {
-  --color-primary: var(--primary);
-  --color-on-primary: var(--on-primary);
-  --color-primary-container: var(--primary-container);
-  --color-on-primary-container: var(--on-primary-container);
-  
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-alt: var(--paper-alt);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --color-secondary: var(--secondary);
-  --color-on-secondary: var(--on-secondary);
-  --color-secondary-container: var(--secondary-container);
-  --color-on-secondary-container: var(--on-secondary-container);
-
-  --color-tertiary: var(--tertiary);
-  --color-on-tertiary: var(--on-tertiary);
-  --color-tertiary-container: var(--tertiary-container);
-  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-pop: var(--pop);
+  --color-danger: var(--danger);
+  --color-disabled: var(--disabled);
 
   --color-background: var(--background);
   --color-on-background: var(--on-background);
-
-  --color-surface: var(--surface);
-  --color-surface-dim: var(--surface-dim);
-  --color-surface-bright: var(--surface-bright);
-  --color-surface-container-lowest: var(--surface-container-lowest);
-  --color-surface-container-low: var(--surface-container-low);
-  --color-surface-container: var(--surface-container);
-  --color-surface-container-high: var(--surface-container-high);
-  --color-surface-container-highest: var(--surface-container-highest);
   --color-on-surface: var(--on-surface);
-  --color-on-surface-variant: var(--on-surface-variant);
-  --color-inverse-surface: var(--inverse-surface);
-  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
 
-  --color-outline: var(--outline);
-  --color-outline-variant: var(--outline-variant);
-
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-plus-jakarta);
-
-  --radius-sm: var(--radius-sm);
-  --radius-default: var(--radius-default);
-  --radius-md: var(--radius-md);
-  --radius-lg: var(--radius-lg);
-  --radius-xl: var(--radius-xl);
-  --radius-full: var(--radius-full);
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fredoka), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--on-background);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
   min-height: 100vh;
 }
 
 *::selection {
-  background: rgba(157, 202, 255, 0.25);
-  color: var(--on-background);
+  background: var(--accent-soft);
+  color: var(--ink);
 }
 
-/* Typography Utilities per DESIGN.md */
-@utility display-hero {
-  font-family: var(--font-plus-jakarta);
+/* Cartoon Blueprint Typography Utilities */
+@utility cartoon-display {
+  font-family: var(--font-display);
   font-size: 44px;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 
   @media (min-width: 640px) {
     font-size: 56px;
-    line-height: 64px;
   }
 
   @media (min-width: 1024px) {
     font-size: 64px;
-    line-height: 72px;
   }
 }
 
-@utility headline-lg {
-  font-family: var(--font-plus-jakarta);
-  font-size: 32px;
+@utility cartoon-title {
+  font-family: var(--font-display);
+  font-size: 22px;
   font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+
+  @media (min-width: 640px) {
+    font-size: 26px;
+  }
+}
+
+@utility cartoon-label {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  color: var(--ink);
+}
 
-  @media (min-width: 768px) {
-    font-size: 38px;
+@utility cartoon-body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--ink);
+
+  @media (min-width: 640px) {
+    font-size: 16px;
   }
 }
 
-@utility title-lg {
-  font-family: var(--font-plus-jakarta);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.3;
+/* Hard Oblique Shadow Utilities */
+@utility shadow-cartoon-lg {
+  box-shadow: var(--shadow-lg);
 }
 
-@utility title-md {
-  font-family: var(--font-plus-jakarta);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.35;
+@utility shadow-cartoon-md {
+  box-shadow: var(--shadow-md);
 }
 
-@utility body-lg {
-  font-family: var(--font-inter);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
+@utility shadow-cartoon-sm {
+  box-shadow: var(--shadow-sm);
 }
 
-@utility label-lg {
-  font-family: var(--font-plus-jakarta);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0.01em;
-}
-
-@utility label-md {
-  font-family: var(--font-inter);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-@utility label-sm {
-  font-family: var(--font-plus-jakarta);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* Atmospheric Ambient Tech & Glassmorphic Utilities */
-@utility bg-grid-pattern {
-  background-image: 
-    radial-gradient(circle at 50% 20%, rgba(21, 123, 200, 0.12) 0%, transparent 60%),
-    radial-gradient(circle at 1px 1px, rgba(95, 121, 153, 0.15) 1px, transparent 0);
-  background-size: 100% 100%, 28px 28px;
-}
-
-@utility kinetic-glass {
-  background: rgba(13, 24, 41, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(95, 121, 153, 0.18);
-}
-
-@utility kinetic-glass-elevated {
-  background: rgba(18, 30, 49, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(95, 121, 153, 0.28);
-}
-
-@utility shadow-ambient {
-  box-shadow: var(--shadow-ambient);
-}
-
-@utility shadow-glass-hover {
-  box-shadow: var(--shadow-glass-hover);
-}
-
-@utility shadow-button-downward {
-  box-shadow: var(--shadow-button-downward);
-}
-
-@utility shadow-button-glow {
-  box-shadow: var(--shadow-button-glow);
+@utility shadow-cartoon-xs {
+  box-shadow: var(--shadow-xs);
 }
