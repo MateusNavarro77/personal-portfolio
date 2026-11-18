@@ -143,6 +143,30 @@
         "emailMe": "Email Me"
     },
     "Footer": {
-        "rights": "All rights reserved."
+        "rights": "All rights reserved.",
+        "builtWith": "Built with Next.js, {designSystem} Design System and Framer Motion."
+    },
+    "Appearance": {
+        "title": "Site Appearance",
+        "subtitle": "Switch between three visual design systems while keeping the same layout and content.",
+        "active": "Active",
+        "selectLabel": "Switch to {name} design system",
+        "items": {
+            "corporate": {
+                "name": "Corporate",
+                "tag": "Minimalist · Navy",
+                "description": "High-contrast navy blocks, crisp white surfaces, and restrained editorial hierarchy."
+            },
+            "developer": {
+                "name": "Developer",
+                "tag": "Terminal · Dark IDE",
+                "description": "Dark slate interface with monospace accents, terminal prompts, and syntax-inspired badges."
+            },
+            "cartoon": {
+                "name": "Cartoon",
+                "tag": "Cartoon Blueprint",
+                "description": "Playful sticker aesthetic with thick ink outlines, flat blueprint blues, and hard oblique shadows."
+            }
+        }
     }
 }

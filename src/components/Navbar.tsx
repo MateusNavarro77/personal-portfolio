@@ -1,21 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
-import { Link } from "@/i18n/routing";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Menu, X, Download } from "lucide-react";
-import LanguageSwitcher from "./LanguageSwitcher";
-import {
-    CartoonAppBar,
-    CartoonIconButton,
-    CartoonSurface,
-    cartoonButtonVariants,
-} from "./cartoon";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 const Navbar = () => {
     const t = useTranslations("Navbar");
     const [isOpen, setIsOpen] = useState(false);
+    const { activeSystem } = useDesignSystem();
+    const {
+        AppBar,
+        NavBrand,
+        NavLink,
+        MobileMenu,
+        MobileNavLink,
+        LanguageSwitcher,
+        NavAppearanceSwitcher,
+        IconButton,
+        getButtonClasses,
+    } = activeSystem.components;
 
     const menuItems = [
         { href: "/#about", label: t("about") },
@@ -34,53 +39,44 @@ const Navbar = () => {
             initial={{ y: -60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 280, damping: 20 }}
-            className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-6 pt-3 pointer-events-none"
+            className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 xl:px-6 pt-3 pointer-events-none"
         >
             <div className="w-full max-w-6xl flex flex-col items-center pointer-events-auto">
                 <nav aria-label="Main Navigation" className="w-full">
-                    <CartoonAppBar
-                        leading={
-                            <Link
-                                href="/#"
-                                className="inline-flex items-center px-3 sm:px-3.5 py-1.5 rounded-[100px] bg-surface border-[2.5px] border-ink shadow-cartoon-xs text-sm sm:text-base font-black tracking-tight text-ink hover:bg-accent-soft transition-colors whitespace-nowrap select-none"
-                            >
-                                Mateus Navarro
-                            </Link>
-                        }
+                    <AppBar
+                        leading={<NavBrand href="/#">Mateus Navarro</NavBrand>}
                         center={
                             <div className="flex items-center gap-0.5 xl:gap-1.5">
                                 {menuItems.map((item) => (
-                                    <Link
-                                        key={item.href}
-                                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                        href={item.href as any}
-                                        className="px-2.5 xl:px-3 py-1.5 rounded-[100px] text-xs xl:text-sm font-extrabold text-ink hover:bg-surface hover:border-[2.5px] hover:border-ink border-[2.5px] border-transparent transition-all duration-150 whitespace-nowrap"
-                                    >
+                                    <NavLink key={item.href} href={item.href}>
                                         {item.label}
-                                    </Link>
+                                    </NavLink>
                                 ))}
                             </div>
                         }
                         actions={
                             <>
+                                <NavAppearanceSwitcher className="hidden sm:inline-flex" />
+
                                 <LanguageSwitcher compact />
 
                                 <a
                                     href={cvUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={cartoonButtonVariants({
+                                    className={getButtonClasses({
                                         variant: "pop",
                                         size: "sm",
                                         shadow: "sm",
-                                        className: "hidden sm:inline-flex whitespace-nowrap",
+                                        className:
+                                            "hidden sm:inline-flex whitespace-nowrap lg:px-3 xl:px-4 lg:text-xs xl:text-sm",
                                     })}
                                 >
-                                    <Download size={15} className="stroke-[2.5]" />
+                                    <Download size={15} className="stroke-[2.5] shrink-0" />
                                     <span>{t("downloadCv")}</span>
                                 </a>
 
-                                <CartoonIconButton
+                                <IconButton
                                     onClick={() => setIsOpen(!isOpen)}
                                     size="sm"
                                     color="surface"
@@ -93,7 +89,7 @@ const Navbar = () => {
                                     ) : (
                                         <Menu size={20} className="stroke-[2.5]" />
                                     )}
-                                </CartoonIconButton>
+                                </IconButton>
                             </>
                         }
                     />
@@ -109,32 +105,27 @@ const Navbar = () => {
                             transition={{ type: "spring", stiffness: 360, damping: 22 }}
                             className="w-full max-w-sm mt-3 lg:hidden"
                         >
-                            <CartoonSurface
-                                color="surface"
-                                radius="card"
-                                border="thick"
-                                shadow="lg"
-                                className="p-4 flex flex-col gap-2"
-                            >
+                            <MobileMenu>
                                 {menuItems.map((item) => (
-                                    <Link
+                                    <MobileNavLink
                                         key={item.href}
-                                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                        href={item.href as any}
+                                        href={item.href}
                                         onClick={() => setIsOpen(false)}
-                                        className="px-4 py-2.5 rounded-[100px] text-sm font-extrabold text-ink bg-paper border-[2.5px] border-ink shadow-cartoon-xs hover:bg-accent transition-colors"
                                     >
                                         {item.label}
-                                    </Link>
+                                    </MobileNavLink>
                                 ))}
 
-                                <div className="pt-2 mt-1 sm:hidden">
+                                <div className="pt-2 mt-1 flex flex-col gap-2.5 sm:hidden">
+                                    <div className="flex justify-center">
+                                        <NavAppearanceSwitcher />
+                                    </div>
                                     <a
                                         href={cvUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => setIsOpen(false)}
-                                        className={cartoonButtonVariants({
+                                        className={getButtonClasses({
                                             variant: "pop",
                                             size: "md",
                                             shadow: "sm",
@@ -145,7 +136,7 @@ const Navbar = () => {
                                         <span>{t("downloadCv")}</span>
                                     </a>
                                 </div>
-                            </CartoonSurface>
+                            </MobileMenu>
                         </motion.div>
                     )}
                 </AnimatePresence>

@@ -4,11 +4,21 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Compass } from "lucide-react";
-import { CartoonCard, SectionTitle, cartoonButtonVariants } from "@/components/cartoon";
+import { cn } from "@/lib/utils";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 export default function NotFound() {
+    const { activeSystem } = useDesignSystem();
+    const { SectionBand, Card, SectionTitle, getButtonClasses } =
+        activeSystem.components;
+    const { typography } = activeSystem;
+
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center px-4 w-full bg-paper">
+        <SectionBand
+            variant="primary"
+            withTopBorder={false}
+            className="min-h-screen flex flex-col justify-center items-center px-4 w-full"
+        >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -19,7 +29,7 @@ export default function NotFound() {
                     Error 404
                 </SectionTitle>
 
-                <CartoonCard
+                <Card
                     variant="surface"
                     tiltDeg={-0.8}
                     icon={<Compass size={22} className="stroke-[2.5]" />}
@@ -28,7 +38,7 @@ export default function NotFound() {
                     actions={
                         <Link
                             href="/"
-                            className={cartoonButtonVariants({
+                            className={getButtonClasses({
                                 variant: "primary",
                                 size: "md",
                                 className: "group",
@@ -42,11 +52,11 @@ export default function NotFound() {
                         </Link>
                     }
                 >
-                    <p className="cartoon-body text-base sm:text-lg">
+                    <p className={cn(typography.body, "text-base sm:text-lg")}>
                         The page you are looking for doesn&apos;t exist or has been moved.
                     </p>
-                </CartoonCard>
+                </Card>
             </motion.div>
-        </section>
+        </SectionBand>
     );
 }

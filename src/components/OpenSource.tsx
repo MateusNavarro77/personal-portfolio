@@ -4,10 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { GitPullRequest, Github, ExternalLink, GitMerge } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Chip from "./Chip";
 import SimpleIcon from "./SimpleIcon";
 import { getTechIcon, getTechColor } from "@/utils/techIcons";
-import { CartoonCard, SectionTitle, cartoonButtonVariants } from "./cartoon";
+import { cn } from "@/lib/utils";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 interface OpenSourceItem {
     repository: string;
@@ -21,6 +21,10 @@ interface OpenSourceItem {
 const OpenSource = () => {
     const t = useTranslations("OpenSource");
     const rawItems = (t.raw("items") as OpenSourceItem[]) || [];
+    const { designSystem, activeSystem } = useDesignSystem();
+    const { Card, SectionTitle, Chip, getButtonClasses } =
+        activeSystem.components;
+    const { typography } = activeSystem;
 
     return (
         <section id="opensource" className="py-20 sm:py-24 px-4 max-w-5xl mx-auto w-full">
@@ -44,7 +48,7 @@ const OpenSource = () => {
                                 damping: 20,
                             }}
                         >
-                            <CartoonCard
+                            <Card
                                 variant={isAccent ? "accent" : "surface"}
                                 tiltDeg={tiltDeg}
                                 icon={<GitPullRequest size={22} className="stroke-[2.5]" />}
@@ -58,7 +62,11 @@ const OpenSource = () => {
                                 }
                                 headerExtra={
                                     <Chip
-                                        variant={isAccent ? "default" : "status"}
+                                        variant={
+                                            designSystem === "cartoon" && isAccent
+                                                ? "default"
+                                                : "status"
+                                        }
                                         icon={<GitMerge size={13} className="stroke-[2.5]" />}
                                         className="shrink-0"
                                     >
@@ -72,18 +80,28 @@ const OpenSource = () => {
                                         href={`https://github.com/${item.repository}`}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="inline-flex items-center gap-2 text-sm font-extrabold text-ink underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity"
+                                        className={typography.linkMuted}
                                     >
                                         <Github className="w-4 h-4 stroke-[2.5]" />
                                         <span>{item.repository}</span>
                                     </a>
                                 </div>
 
-                                <p className="cartoon-body text-sm sm:text-base mb-6">
+                                <p
+                                    className={cn(
+                                        typography.body,
+                                        "text-sm sm:text-base mb-6"
+                                    )}
+                                >
                                     {item.description}
                                 </p>
 
-                                <div className="pt-4 border-t-[2.5px] border-ink flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div
+                                    className={cn(
+                                        "pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4",
+                                        typography.dividerTop
+                                    )}
+                                >
                                     <div className="flex flex-wrap gap-2">
                                         {item.technologies.map((tech) => {
                                             const icon = getTechIcon(tech);
@@ -96,7 +114,6 @@ const OpenSource = () => {
                                                             <SimpleIcon
                                                                 icon={icon}
                                                                 size={13}
-                                                                color="#0b0e13"
                                                             />
                                                         ) : undefined
                                                     }
@@ -113,7 +130,7 @@ const OpenSource = () => {
                                         href={item.prUrl}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className={cartoonButtonVariants({
+                                        className={getButtonClasses({
                                             variant: isAccent ? "surface" : "primary",
                                             size: "sm",
                                             shadow: "sm",
@@ -125,7 +142,7 @@ const OpenSource = () => {
                                         <ExternalLink size={14} className="stroke-[2.5]" />
                                     </a>
                                 </div>
-                            </CartoonCard>
+                            </Card>
                         </motion.div>
                     );
                 })}

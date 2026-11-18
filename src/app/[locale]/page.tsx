@@ -1,33 +1,38 @@
 import Hero from "@/components/Hero";
+import DesignSystemSwitcher from "@/components/DesignSystemSwitcher";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
 import OpenSource from "@/components/OpenSource";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import { DSPageShell, DSSectionBand } from "@/design-systems/ds-layout";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full bg-paper overflow-x-clip">
+    <DSPageShell>
       <Hero />
-      <div className="w-full bg-paper-alt border-t-[3.5px] border-ink">
+      <DSSectionBand variant="alt">
+        <DesignSystemSwitcher />
+      </DSSectionBand>
+      <DSSectionBand variant="primary">
         <AboutMe />
-      </div>
-      <div className="w-full bg-paper border-t-[3.5px] border-ink">
+      </DSSectionBand>
+      <DSSectionBand variant="alt">
         <Projects />
-      </div>
-      <div className="w-full bg-paper-alt border-t-[3.5px] border-ink">
+      </DSSectionBand>
+      <DSSectionBand variant="primary">
         <OpenSource />
-      </div>
-      <div className="w-full bg-paper border-t-[3.5px] border-ink">
+      </DSSectionBand>
+      <DSSectionBand variant="alt">
         <Skills />
-      </div>
-      <div className="w-full bg-paper-alt border-t-[3.5px] border-ink">
+      </DSSectionBand>
+      <DSSectionBand variant="primary">
         <Experience />
-      </div>
-      <div className="w-full bg-paper border-t-[3.5px] border-ink">
+      </DSSectionBand>
+      <DSSectionBand variant="alt">
         <Contact />
-      </div>
-    </main>
+      </DSSectionBand>
+    </DSPageShell>
   );
 }

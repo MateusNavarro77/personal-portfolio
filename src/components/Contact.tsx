@@ -6,10 +6,14 @@ import { Mail, Linkedin, MessageSquare } from "lucide-react";
 import { useTranslations } from "next-intl";
 import SimpleIcon from "./SimpleIcon";
 import { siGithub } from "simple-icons";
-import { CartoonCard, cartoonButtonVariants } from "./cartoon";
+import { cn } from "@/lib/utils";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 const Contact = () => {
     const t = useTranslations("Contact");
+    const { activeSystem } = useDesignSystem();
+    const { Card, getButtonClasses } = activeSystem.components;
+    const { typography } = activeSystem;
 
     return (
         <section id="contact" className="py-20 sm:py-24 px-4 max-w-3xl mx-auto w-full">
@@ -19,21 +23,26 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 240, damping: 20 }}
             >
-                <CartoonCard
+                <Card
                     variant="accent"
                     tiltDeg={-0.65}
                     icon={<MessageSquare size={22} className="stroke-[2.5]" />}
                     title={t("title")}
                     className="p-7 sm:p-10 text-left"
                 >
-                    <p className="cartoon-body text-base sm:text-lg mb-8 max-w-lg">
+                    <p
+                        className={cn(
+                            typography.body,
+                            "text-base sm:text-lg mb-8 max-w-lg"
+                        )}
+                    >
                         {t("description")}
                     </p>
 
                     <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4">
                         <a
                             href="mailto:mateusnavarro9@gmail.com"
-                            className={cartoonButtonVariants({
+                            className={getButtonClasses({
                                 variant: "surface",
                                 size: "md",
                                 className: "w-full sm:w-auto",
@@ -46,7 +55,7 @@ const Contact = () => {
                             href="https://www.linkedin.com/in/mateus-navarro-910673298/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={cartoonButtonVariants({
+                            className={getButtonClasses({
                                 variant: "secondary",
                                 size: "md",
                                 className: "w-full sm:w-auto",
@@ -60,18 +69,18 @@ const Contact = () => {
                             href="https://github.com/MateusNavarro77"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={cartoonButtonVariants({
+                            className={getButtonClasses({
                                 variant: "secondary",
                                 size: "md",
                                 className: "w-full sm:w-auto",
                             })}
                             aria-label="GitHub"
                         >
-                            <SimpleIcon icon={siGithub} size={18} color="#0b0e13" />
+                            <SimpleIcon icon={siGithub} size={18} />
                             <span>GitHub</span>
                         </a>
                     </div>
-                </CartoonCard>
+                </Card>
             </motion.div>
         </section>
     );

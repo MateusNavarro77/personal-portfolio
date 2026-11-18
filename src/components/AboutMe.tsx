@@ -6,10 +6,14 @@ import { User } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { githubAvatarFaviconUrl } from "@/constants";
-import { CartoonCard, CartoonSurface, SectionTitle } from "./cartoon";
+import { cn } from "@/lib/utils";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 const AboutMe = () => {
     const t = useTranslations("About");
+    const { activeSystem } = useDesignSystem();
+    const { Card, AboutAvatarFrame, SectionTitle } = activeSystem.components;
+    const { typography } = activeSystem;
 
     return (
         <section id="about" className="py-20 sm:py-24 px-4 max-w-5xl mx-auto w-full">
@@ -23,38 +27,29 @@ const AboutMe = () => {
                 className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center"
             >
                 <div className="md:col-span-5 flex justify-center">
-                    <CartoonSurface
-                        color="surface"
-                        radius="card"
-                        border="thick"
-                        shadow="lg"
-                        tiltDeg={-1.1}
-                        className="relative aspect-square max-w-xs sm:max-w-sm w-full overflow-hidden p-2 bg-surface"
-                    >
-                        <div className="relative w-full h-full rounded-[20px] overflow-hidden border-[3px] border-ink bg-secondary">
-                            <Image
-                                src={githubAvatarFaviconUrl}
-                                alt="Profile picture"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </CartoonSurface>
+                    <AboutAvatarFrame>
+                        <Image
+                            src={githubAvatarFaviconUrl}
+                            alt="Profile picture"
+                            fill
+                            className="object-cover"
+                        />
+                    </AboutAvatarFrame>
                 </div>
 
                 <div className="md:col-span-7">
-                    <CartoonCard
+                    <Card
                         variant="surface"
                         tiltDeg={0.7}
                         icon={<User size={22} className="stroke-[2.5]" />}
                         title={t("title")}
                         className="p-6 sm:p-8"
                     >
-                        <div className="space-y-4 cartoon-body text-ink">
+                        <div className={cn("space-y-4", typography.body)}>
                             <p>{t("p1")}</p>
                             <p>{t("p2")}</p>
                         </div>
-                    </CartoonCard>
+                    </Card>
                 </div>
             </motion.div>
         </section>

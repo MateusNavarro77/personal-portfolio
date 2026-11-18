@@ -4,7 +4,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import ProjectCard from "./ProjectCard";
 import { githubRootUrl } from "@/constants";
-import { SectionTitle } from "./cartoon";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 const PROJECTS_METADATA = [
     {
@@ -37,6 +37,8 @@ const PROJECTS_METADATA = [
 
 const Projects = () => {
     const t = useTranslations("Projects");
+    const { activeSystem } = useDesignSystem();
+    const { SectionTitle } = activeSystem.components;
 
     return (
         <section id="projects" className="py-20 sm:py-24 px-4 max-w-5xl mx-auto w-full">

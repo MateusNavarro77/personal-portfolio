@@ -6,8 +6,8 @@ This repository is a Next.js portfolio site for a developer profile, using the A
 - App entry points: `src/app/`
 - Locale config: `src/i18n/routing.ts`, `src/i18n/request.ts`
 - Shared content: `src/messages/*.json`
-- UI components: `src/components/`
-- Design tokens: `DESIGN.md`
+- UI components: `src/components/` and `src/design-systems/`
+- Design tokens & specs: `specs/design-systems/` (`corporate.md`, `developer.md`, `cartoon-blueprint.md`)
 - Global styling: `src/app/globals.css`
 
 ## Commands
@@ -23,10 +23,13 @@ Use these commands from the project root:
 - Keep locale-aware navigation and path generation using the wrappers from `src/i18n/routing.ts` instead of raw `next/link` for localized routes.
 - Most page sections are composed from server components in `src/components/`; add `"use client"` only when interactivity is actually required.
 - Content copy is usually stored in `src/messages/*.json` and loaded through `next-intl`, so update translations together when changing visible text.
-- Styling is driven by Tailwind classes plus the design tokens documented in `DESIGN.md`; preserve the established visual hierarchy and blue/neutral palette.
+- Styling is driven by Tailwind classes plus the design tokens and component implementations documented in `specs/design-systems/` (`corporate.md`, `developer.md`, `cartoon-blueprint.md`); preserve the established visual hierarchy for each design system.
 
 ## Design system guidance
-- Follow the system described in `DESIGN.md`
+- Follow the active design system specs in `specs/design-systems/`:
+  - `specs/design-systems/corporate.md` (default)
+  - `specs/design-systems/developer.md`
+  - `specs/design-systems/cartoon-blueprint.md`
 
 ## Safe editing patterns
 - Before changing route behavior or locale handling, inspect `src/i18n/routing.ts` and `src/i18n/request.ts`.
@@ -40,7 +43,9 @@ Use these commands from the project root:
 
 ## Useful references
 - [README.md](README.md)
-- [DESIGN.md](DESIGN.md)
+- [specs/design-systems/corporate.md](specs/design-systems/corporate.md)
+- [specs/design-systems/developer.md](specs/design-systems/developer.md)
+- [specs/design-systems/cartoon-blueprint.md](specs/design-systems/cartoon-blueprint.md)
 - [src/i18n/routing.ts](src/i18n/routing.ts)
 - [src/app/[locale]/layout.tsx](src/app/[locale]/layout.tsx)
 - [src/app/[locale]/page.tsx](src/app/[locale]/page.tsx)
