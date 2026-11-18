@@ -42,19 +42,19 @@ const Navbar = () => {
                         leading={
                             <Link
                                 href="/#"
-                                className="inline-flex items-center px-3.5 py-1.5 rounded-[100px] bg-surface border-[2.5px] border-ink shadow-cartoon-xs text-sm sm:text-base font-black tracking-tight text-ink hover:bg-accent-soft transition-colors whitespace-nowrap select-none"
+                                className="inline-flex items-center px-3 sm:px-3.5 py-1.5 rounded-[100px] bg-surface border-[2.5px] border-ink shadow-cartoon-xs text-sm sm:text-base font-black tracking-tight text-ink hover:bg-accent-soft transition-colors whitespace-nowrap select-none"
                             >
                                 Mateus Navarro
                             </Link>
                         }
                         center={
-                            <div className="flex items-center gap-1 lg:gap-1.5">
+                            <div className="flex items-center gap-0.5 xl:gap-1.5">
                                 {menuItems.map((item) => (
                                     <Link
                                         key={item.href}
                                         // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                         href={item.href as any}
-                                        className="px-3 py-1.5 rounded-[100px] text-xs lg:text-sm font-extrabold text-ink hover:bg-surface hover:border-[2.5px] hover:border-ink border-[2.5px] border-transparent transition-all duration-150 whitespace-nowrap"
+                                        className="px-2.5 xl:px-3 py-1.5 rounded-[100px] text-xs xl:text-sm font-extrabold text-ink hover:bg-surface hover:border-[2.5px] hover:border-ink border-[2.5px] border-transparent transition-all duration-150 whitespace-nowrap"
                                     >
                                         {item.label}
                                     </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
                                     onClick={() => setIsOpen(!isOpen)}
                                     size="sm"
                                     color="surface"
-                                    className="md:hidden"
+                                    className="lg:hidden"
                                     aria-label="Toggle Menu"
                                     aria-expanded={isOpen}
                                 >
@@ -107,7 +107,7 @@ const Navbar = () => {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: -12, scale: 0.96 }}
                             transition={{ type: "spring", stiffness: 360, damping: 22 }}
-                            className="w-full max-w-sm mt-3 md:hidden"
+                            className="w-full max-w-sm mt-3 lg:hidden"
                         >
                             <CartoonSurface
                                 color="surface"
@@ -128,7 +128,7 @@ const Navbar = () => {
                                     </Link>
                                 ))}
 
-                                <div className="pt-2 mt-1">
+                                <div className="pt-2 mt-1 sm:hidden">
                                     <a
                                         href={cvUrl}
                                         target="_blank"
