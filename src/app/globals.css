@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Cartoon Blueprint Tokens (Light Mode per DESIGN.md) */
+  /* Cartoon Blueprint Tokens (Light Mode per specs/design-systems/cartoon-blueprint.md) */
   --ink: #0b0e13;
   --paper: #e0e2e9;
   --paper-alt: #d6dce6;
@@ -13,16 +13,29 @@
   --danger: #ffb4ab;
   --disabled: #c0c7d3;
 
-  /* Semantic aliases */
+  /* Semantic aliases (Cartoon defaults) */
   --background: var(--paper);
   --on-background: var(--ink);
   --on-surface: var(--ink);
   --primary: var(--accent);
   --on-primary: var(--ink);
 
+  /* Active Design System Page Tokens (Corporate default) */
+  --ds-bg: #ffffff;
+  --ds-bg-alt: #f8fafc;
+  --ds-fg: #0f172a;
+  --ds-fg-muted: #475569;
+  --ds-border: #e2e8f0;
+  --ds-selection-bg: #dbeafe;
+  --ds-selection-fg: #0f172a;
+  --ds-font-sans: var(--font-inter), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --ds-font-display: var(--font-inter), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+
   /* Typography */
   --font-fredoka: var(--font-fredoka);
   --font-plus-jakarta: var(--font-plus-jakarta);
+  --font-inter: var(--font-inter);
+  --font-jetbrains-mono: var(--font-jetbrains-mono);
 
   /* Borders & Radii */
   --border-thick: 3.5px;
@@ -36,6 +49,42 @@
   --shadow-md: 5px 6px 0px #0b0e13;
   --shadow-sm: 3px 4px 0px #0b0e13;
   --shadow-xs: 2px 3px 0px #0b0e13;
+}
+
+[data-design-system="corporate"] {
+  --ds-bg: #ffffff;
+  --ds-bg-alt: #f8fafc;
+  --ds-fg: #0f172a;
+  --ds-fg-muted: #475569;
+  --ds-border: #e2e8f0;
+  --ds-selection-bg: #dbeafe;
+  --ds-selection-fg: #0f172a;
+  --ds-font-sans: var(--font-inter), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --ds-font-display: var(--font-inter), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+[data-design-system="developer"] {
+  --ds-bg: #0d1117;
+  --ds-bg-alt: #090d13;
+  --ds-fg: #e6edf3;
+  --ds-fg-muted: #8b949e;
+  --ds-border: #30363d;
+  --ds-selection-bg: rgba(63, 185, 80, 0.25);
+  --ds-selection-fg: #e6edf3;
+  --ds-font-sans: var(--font-plus-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --ds-font-display: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+[data-design-system="cartoon"] {
+  --ds-bg: var(--paper);
+  --ds-bg-alt: var(--paper-alt);
+  --ds-fg: var(--ink);
+  --ds-fg-muted: var(--ink);
+  --ds-border: var(--ink);
+  --ds-selection-bg: var(--accent-soft);
+  --ds-selection-fg: var(--ink);
+  --ds-font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --ds-font-display: var(--font-fredoka), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -56,25 +105,27 @@
   --color-primary: var(--primary);
   --color-on-primary: var(--on-primary);
 
-  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fredoka), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--ds-font-sans);
+  --font-display: var(--ds-font-display);
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-sans);
+  background: var(--ds-bg);
+  color: var(--ds-fg);
+  font-family: var(--ds-font-sans);
   min-height: 100vh;
+  transition: background-color 250ms ease, color 250ms ease;
 }
 
 *::selection {
-  background: var(--accent-soft);
-  color: var(--ink);
+  background: var(--ds-selection-bg);
+  color: var(--ds-selection-fg);
 }
 
 /* Cartoon Blueprint Typography Utilities */
 @utility cartoon-display {
-  font-family: var(--font-display);
+  font-family: var(--font-fredoka), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   font-size: 44px;
   font-weight: 700;
   line-height: 1.02;
@@ -91,7 +142,7 @@ body {
 }
 
 @utility cartoon-title {
-  font-family: var(--font-display);
+  font-family: var(--font-fredoka), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
@@ -103,7 +154,7 @@ body {
 }
 
 @utility cartoon-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.25;
@@ -111,7 +162,7 @@ body {
 }
 
 @utility cartoon-body {
-  font-family: var(--font-sans);
+  font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 1.55;

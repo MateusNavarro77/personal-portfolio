@@ -4,10 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Code2, Layers, Wrench } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Chip from "./Chip";
 import SimpleIcon from "./SimpleIcon";
 import { getTechIcon, getTechColor } from "@/utils/techIcons";
-import { CartoonCard, SectionTitle } from "./cartoon";
+import { useDesignSystem } from "@/design-systems/DesignSystemProvider";
 
 const SKILLS = {
     Languages: ["Dart", "Solidity", "TypeScript", "Java", "JavaScript"],
@@ -23,6 +22,8 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
 
 const Skills = () => {
     const t = useTranslations("Skills");
+    const { activeSystem } = useDesignSystem();
+    const { Card, SectionTitle, Chip } = activeSystem.components;
 
     return (
         <section id="skills" className="py-20 sm:py-24 px-4 max-w-5xl mx-auto w-full">
@@ -46,7 +47,7 @@ const Skills = () => {
                             }}
                             className="h-full"
                         >
-                            <CartoonCard
+                            <Card
                                 variant={index === 1 ? "accent" : "surface"}
                                 tiltDeg={tiltDeg}
                                 icon={CATEGORY_ICONS[category]}
@@ -65,7 +66,6 @@ const Skills = () => {
                                                         <SimpleIcon
                                                             icon={icon}
                                                             size={14}
-                                                            color="#0b0e13"
                                                         />
                                                     ) : undefined
                                                 }
@@ -77,7 +77,7 @@ const Skills = () => {
                                         );
                                     })}
                                 </div>
-                            </CartoonCard>
+                            </Card>
                         </motion.div>
                     );
                 })}
