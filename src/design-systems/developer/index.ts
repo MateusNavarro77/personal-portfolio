@@ -21,6 +21,7 @@ import {
     getDeveloperButtonClasses,
 } from "./components/DeveloperPrimitives";
 import DeveloperLanguageSwitcher from "./components/DeveloperLanguageSwitcher";
+import DeveloperNavAppearanceSwitcher from "./components/DeveloperNavAppearanceSwitcher";
 import DeveloperHeroShowcase from "./components/DeveloperHeroShowcase";
 import DeveloperProjectCard from "./components/DeveloperProjectCard";
 import {
@@ -55,6 +56,7 @@ export const developerDesignSystem: DesignSystemDefinition = {
         MobileMenu: DeveloperMobileMenu,
         MobileNavLink: DeveloperMobileNavLink,
         LanguageSwitcher: DeveloperLanguageSwitcher,
+        NavAppearanceSwitcher: DeveloperNavAppearanceSwitcher,
         Surface: DeveloperSurface,
         Card: DeveloperCard,
         Button: DeveloperButton,

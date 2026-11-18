@@ -17,6 +17,7 @@ const Navbar = () => {
         MobileMenu,
         MobileNavLink,
         LanguageSwitcher,
+        NavAppearanceSwitcher,
         IconButton,
         getButtonClasses,
     } = activeSystem.components;
@@ -38,7 +39,7 @@ const Navbar = () => {
             initial={{ y: -60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 280, damping: 20 }}
-            className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-6 pt-3 pointer-events-none"
+            className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 xl:px-6 pt-3 pointer-events-none"
         >
             <div className="w-full max-w-6xl flex flex-col items-center pointer-events-auto">
                 <nav aria-label="Main Navigation" className="w-full">
@@ -55,6 +56,8 @@ const Navbar = () => {
                         }
                         actions={
                             <>
+                                <NavAppearanceSwitcher className="hidden sm:inline-flex" />
+
                                 <LanguageSwitcher compact />
 
                                 <a
@@ -65,10 +68,11 @@ const Navbar = () => {
                                         variant: "pop",
                                         size: "sm",
                                         shadow: "sm",
-                                        className: "hidden sm:inline-flex whitespace-nowrap",
+                                        className:
+                                            "hidden sm:inline-flex whitespace-nowrap lg:px-3 xl:px-4 lg:text-xs xl:text-sm",
                                     })}
                                 >
-                                    <Download size={15} className="stroke-[2.5]" />
+                                    <Download size={15} className="stroke-[2.5] shrink-0" />
                                     <span>{t("downloadCv")}</span>
                                 </a>
 
@@ -112,7 +116,10 @@ const Navbar = () => {
                                     </MobileNavLink>
                                 ))}
 
-                                <div className="pt-2 mt-1 sm:hidden">
+                                <div className="pt-2 mt-1 flex flex-col gap-2.5 sm:hidden">
+                                    <div className="flex justify-center">
+                                        <NavAppearanceSwitcher />
+                                    </div>
                                     <a
                                         href={cvUrl}
                                         target="_blank"

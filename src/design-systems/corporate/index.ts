@@ -21,6 +21,7 @@ import {
     getCorporateButtonClasses,
 } from "./components/CorporatePrimitives";
 import CorporateLanguageSwitcher from "./components/CorporateLanguageSwitcher";
+import CorporateNavAppearanceSwitcher from "./components/CorporateNavAppearanceSwitcher";
 import CorporateHeroShowcase from "./components/CorporateHeroShowcase";
 import CorporateProjectCard from "./components/CorporateProjectCard";
 import {
@@ -55,6 +56,7 @@ export const corporateDesignSystem: DesignSystemDefinition = {
         MobileMenu: CorporateMobileMenu,
         MobileNavLink: CorporateMobileNavLink,
         LanguageSwitcher: CorporateLanguageSwitcher,
+        NavAppearanceSwitcher: CorporateNavAppearanceSwitcher,
         Surface: CorporateSurface,
         Card: CorporateCard,
         Button: CorporateButton,

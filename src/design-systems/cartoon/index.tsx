@@ -17,6 +17,7 @@ import {
 } from "@/components/cartoon";
 import CartoonTechCarousel from "@/components/CartoonTechCarousel";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import CartoonNavAppearanceSwitcher from "./components/CartoonNavAppearanceSwitcher";
 import Chip from "@/components/Chip";
 import { Badge } from "@/components/ui/badge";
 import SimpleIcon from "@/components/SimpleIcon";
@@ -109,7 +110,7 @@ function CartoonNavLink({
         <Link
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             href={href as any}
-            className="px-2.5 xl:px-3 py-1.5 rounded-[100px] text-xs xl:text-sm font-extrabold text-ink hover:bg-surface hover:border-[2.5px] hover:border-ink border-[2.5px] border-transparent transition-all duration-150 whitespace-nowrap"
+            className="px-2 xl:px-3 py-1.5 rounded-[100px] text-[11px] xl:text-sm font-extrabold text-ink hover:bg-surface hover:border-[2.5px] hover:border-ink border-[2.5px] border-transparent transition-all duration-150 whitespace-nowrap"
         >
             {children}
         </Link>
@@ -414,6 +415,7 @@ export const cartoonDesignSystem: DesignSystemDefinition = {
         MobileMenu: CartoonMobileMenu,
         MobileNavLink: CartoonMobileNavLink,
         LanguageSwitcher: LanguageSwitcher,
+        NavAppearanceSwitcher: CartoonNavAppearanceSwitcher,
         Surface: CartoonSurface as React.ComponentType<DSSurfaceProps>,
         Card: CartoonCard as React.ComponentType<DSCardProps>,
         Button: CartoonButton as React.ComponentType<DSButtonProps>,

@@ -168,6 +168,7 @@ export interface DesignSystemComponents {
         children: React.ReactNode;
     }>;
     LanguageSwitcher: React.ComponentType<{ compact?: boolean; className?: string }>;
+    NavAppearanceSwitcher: React.ComponentType<{ className?: string }>;
     Surface: React.ComponentType<DSSurfaceProps>;
     Card: React.ComponentType<DSCardProps>;
     Button: React.ComponentType<DSButtonProps>;

@@ -71,7 +71,7 @@ export function CorporateAppBar({
     return (
         <div
             className={cn(
-                "w-full rounded-xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.06)] px-3 sm:px-5 py-2.5 flex items-center justify-between gap-2 sm:gap-4",
+                "w-full rounded-xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.06)] px-3 sm:px-4 xl:px-5 py-2.5 flex items-center justify-between gap-2 xl:gap-4",
                 className
             )}
         >
@@ -82,7 +82,7 @@ export function CorporateAppBar({
                 </div>
             )}
             {actions && (
-                <div className="shrink-0 flex items-center gap-2 sm:gap-2.5">
+                <div className="shrink-0 flex items-center gap-1.5 xl:gap-2.5">
                     {actions}
                 </div>
             )}
@@ -120,7 +120,7 @@ export function CorporateNavLink({
         <Link
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             href={href as any}
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs xl:text-sm font-medium text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-colors whitespace-nowrap"
+            className="px-2 xl:px-3 py-1.5 rounded-lg text-xs xl:text-sm font-medium text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-colors whitespace-nowrap"
         >
             {children}
         </Link>

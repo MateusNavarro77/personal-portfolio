@@ -69,7 +69,7 @@ export function DeveloperAppBar({
     return (
         <div
             className={cn(
-                "w-full rounded-lg bg-[#161B22]/95 backdrop-blur-md border border-[#30363D] shadow-[0_8px_28px_rgba(0,0,0,0.45)] px-3 sm:px-4 py-2 flex items-center justify-between gap-2 sm:gap-3",
+                "w-full rounded-lg bg-[#161B22]/95 backdrop-blur-md border border-[#30363D] shadow-[0_8px_28px_rgba(0,0,0,0.45)] px-3 xl:px-4 py-2 flex items-center justify-between gap-2 xl:gap-3",
                 className
             )}
         >
@@ -80,7 +80,7 @@ export function DeveloperAppBar({
                 </div>
             )}
             {actions && (
-                <div className="shrink-0 flex items-center gap-2">{actions}</div>
+                <div className="shrink-0 flex items-center gap-1.5 xl:gap-2">{actions}</div>
             )}
         </div>
     );
@@ -117,7 +117,7 @@ export function DeveloperNavLink({
         <Link
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             href={href as any}
-            className="px-2.5 xl:px-3 py-1.5 rounded-md font-mono text-xs font-medium text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#21262D] border border-transparent hover:border-[#30363D] transition-colors whitespace-nowrap"
+            className="px-2 xl:px-3 py-1.5 rounded-md font-mono text-[11px] xl:text-xs font-medium text-[#8B949E] hover:text-[#E6EDF3] hover:bg-[#21262D] border border-transparent hover:border-[#30363D] transition-colors whitespace-nowrap"
         >
             {children}
         </Link>

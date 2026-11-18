@@ -25,7 +25,7 @@ export function CartoonAppBar({
             border="thick"
             shadow="md"
             className={cn(
-                "px-2.5 sm:px-5 py-2 flex items-center justify-between gap-2 sm:gap-3",
+                "px-2.5 sm:px-3.5 xl:px-5 py-2 flex items-center justify-between gap-1.5 sm:gap-2 xl:gap-3",
                 className
             )}
         >
@@ -36,7 +36,7 @@ export function CartoonAppBar({
                 </div>
             )}
             {actions && (
-                <div className="shrink-0 flex items-center gap-1.5 sm:gap-2.5">
+                <div className="shrink-0 flex items-center gap-1.5 xl:gap-2.5">
                     {actions}
                 </div>
             )}
